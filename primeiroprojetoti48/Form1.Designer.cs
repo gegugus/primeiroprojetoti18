@@ -36,6 +36,7 @@
             this.txt_NumA = new System.Windows.Forms.TextBox();
             this.txt_NumB = new System.Windows.Forms.TextBox();
             this.txt_Resultado = new System.Windows.Forms.TextBox();
+            this.lbl_Resultado = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_Adicao
@@ -49,6 +50,7 @@
             this.btn_Adicao.Text = "+";
             this.btn_Adicao.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Adicao.UseVisualStyleBackColor = true;
+            this.btn_Adicao.Click += new System.EventHandler(this.btn_Adicao_Click);
             // 
             // btn_Subtracao
             // 
@@ -61,6 +63,7 @@
             this.btn_Subtracao.Text = "-";
             this.btn_Subtracao.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Subtracao.UseVisualStyleBackColor = true;
+            this.btn_Subtracao.Click += new System.EventHandler(this.btn_Subtracao_Click);
             // 
             // btn_Multiplicacao
             // 
@@ -73,6 +76,7 @@
             this.btn_Multiplicacao.Text = "x";
             this.btn_Multiplicacao.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Multiplicacao.UseVisualStyleBackColor = true;
+            this.btn_Multiplicacao.Click += new System.EventHandler(this.btn_Multiplicacao_Click);
             // 
             // btn_Divisao
             // 
@@ -115,10 +119,22 @@
             // 
             // txt_Resultado
             // 
-            this.txt_Resultado.Location = new System.Drawing.Point(27, 219);
+            this.txt_Resultado.Location = new System.Drawing.Point(27, 234);
             this.txt_Resultado.Name = "txt_Resultado";
             this.txt_Resultado.Size = new System.Drawing.Size(206, 20);
             this.txt_Resultado.TabIndex = 2;
+            // 
+            // lbl_Resultado
+            // 
+            this.lbl_Resultado.AutoSize = true;
+            this.lbl_Resultado.Font = new System.Drawing.Font("SansSerif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.lbl_Resultado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_Resultado.Location = new System.Drawing.Point(24, 211);
+            this.lbl_Resultado.Name = "lbl_Resultado";
+            this.lbl_Resultado.Size = new System.Drawing.Size(84, 17);
+            this.lbl_Resultado.TabIndex = 3;
+            this.lbl_Resultado.Text = "Resultado:";
+            this.lbl_Resultado.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
@@ -126,6 +142,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(274, 311);
+            this.Controls.Add(this.lbl_Resultado);
             this.Controls.Add(this.txt_Resultado);
             this.Controls.Add(this.txt_NumB);
             this.Controls.Add(this.txt_NumA);
@@ -135,7 +152,7 @@
             this.Controls.Add(this.btn_Subtracao);
             this.Controls.Add(this.btn_Adicao);
             this.Name = "Form1";
-            this.Text = "Calculadora";
+            this.Text = "Calculadora v1.0";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,6 +168,7 @@
         private System.Windows.Forms.TextBox txt_NumA;
         private System.Windows.Forms.TextBox txt_NumB;
         private System.Windows.Forms.TextBox txt_Resultado;
+        private System.Windows.Forms.Label lbl_Resultado;
     }
 }
 

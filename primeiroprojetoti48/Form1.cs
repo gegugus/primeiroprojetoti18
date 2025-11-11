@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,17 +18,44 @@ namespace primeiroprojetoti48
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void lbl_Calculadora_Click(object sender, EventArgs e)
         {
-            label1.Text = "Olá turma ti48";
+
+        }
+
+        private void btn_Adicao_Click(object sender, EventArgs e)
+        {
+            double valor1 = double.Parse(txt_NumA.Text);
+            double valor2 = double.Parse(txt_NumB.Text);
+            double resultado = valor1 + valor2;
+            txt_Resultado.Text = resultado.ToString();
+        }
+
+        private void btn_Subtracao_Click(object sender, EventArgs e)
+        {
+            double valor1 = double.Parse(txt_NumA.Text);
+            double valor2 = double.Parse(txt_NumB.Text);
+            double resultado = valor1 - valor2;
+            txt_Resultado.Text = resultado.ToString();
+        }
+
+        private void btn_Multiplicacao_Click(object sender, EventArgs e)
+        {
+            double valor1 = double.Parse(txt_NumA.Text);
+            double valor2 = double.Parse(txt_NumB.Text);
+            double resultado = valor1 * valor2;
+            txt_Resultado.Text = resultado.ToString();
         }
 
         private void btn_Divisao_Click(object sender, EventArgs e)
         {
-
+            double valor1 = double.Parse(txt_NumA.Text);
+            double valor2 = double.Parse(txt_NumB.Text);
+            double resultado = valor1 / valor2;
+            txt_Resultado.Text = resultado.ToString();
         }
 
-        private void lbl_Calculadora_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
