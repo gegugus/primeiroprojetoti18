@@ -21,5 +21,15 @@ namespace primeiroprojetoti48
         {
             label1.Text = "Olá turma ti48";
         }
+
+        private void btn_Divisao_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_Calculadora_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
