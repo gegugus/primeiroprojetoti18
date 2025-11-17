@@ -27,12 +27,12 @@ namespace primeiroprojetoti48
             resultado = 0;
         }
 
-        private void lbl_Calculadora_Click(object sender, EventArgs e)
+        private void LblCalculadora_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btn_MaisMenos_Click(object sender, EventArgs e)
+        private void BtnMaisMenos_Click(object sender, EventArgs e)
         {
             valor1 = double.Parse(txtDisplay.Text);
             valor1 *= -1;
@@ -40,13 +40,13 @@ namespace primeiroprojetoti48
             txtDisplay.Text = valor1.ToString();
         }
 
-        private void btn_Porcentagem_Click(object sender, EventArgs e)
+        private void BtnPorcentagem_Click(object sender, EventArgs e)
         {
             double porcentagem = resultado / 100;
             txtDisplay.Text = porcentagem.ToString() + " % ";
         }
 
-        private void btn_Adicao_Click(object sender, EventArgs e)
+        private void BtnAdicao_Click(object sender, EventArgs e)
         {
             operacao = "Adicao";
             valor1 = double.Parse(txtDisplay.Text);
@@ -54,7 +54,7 @@ namespace primeiroprojetoti48
             txtDisplay.Clear();
         }
 
-        private void btn_Subtracao_Click(object sender, EventArgs e)
+        private void BtnSubtracao_Click(object sender, EventArgs e)
         {
             operacao = "Subtracao";
             valor1 = double.Parse(txtDisplay.Text);
@@ -62,7 +62,7 @@ namespace primeiroprojetoti48
             txtDisplay.Clear();
         }
 
-        private void btn_Multiplicacao_Click(object sender, EventArgs e)
+        private void BtnMultiplicacao_Click(object sender, EventArgs e)
         {
             operacao = "Multiplicacao";
             valor1 = double.Parse(txtDisplay.Text);
@@ -70,7 +70,7 @@ namespace primeiroprojetoti48
             txtDisplay.Clear();
         }
 
-        private void btn_Divisao_Click(object sender, EventArgs e)
+        private void BtnDivisao_Click(object sender, EventArgs e)
         {
             operacao = "Divisao";
             valor1 = double.Parse(txtDisplay.Text);
@@ -78,13 +78,40 @@ namespace primeiroprojetoti48
             txtDisplay.Clear();
         }
 
-        private void btnLimpar_Click(object sender, EventArgs e)
+        private void BtnLimpar_Click(object sender, EventArgs e)
         {
             txtDisplay.Clear();
             txtResultado.Clear();
         }
+        private void BtnFatorial_Click(object sender, EventArgs e)
+        {
+            valor1 = double.Parse(txtDisplay.Text);
+            resultado = 1;
 
-        private void btnigual_Click(object sender, EventArgs e)
+            for (int i = 1; i <= valor1; i++)
+            {
+                resultado *= i;
+            }
+
+            txtDisplay.Text = valor1.ToString();
+            txtResultado.Text = resultado.ToString() + "!";
+        }
+
+        private void BtnEQuadrado_Click(object sender, EventArgs e)
+        {
+            valor1 = double.Parse(txtDisplay.Text);
+            resultado = valor1 * valor1;
+            txtDisplay.Text = resultado.ToString();
+            txtResultado.Text = valor1.ToString() + "²";
+        }
+        private void BtnECubo_Click(object sender, EventArgs e)
+        {
+            operacao = "elevacao";
+            valor1 = double.Parse(txtDisplay.Text);
+            txtResultado.Text = valor1.ToString() + "^";
+            txtDisplay.Clear();
+        }
+        private void BtnIgual_Click(object sender, EventArgs e)
         {
             switch (operacao)
             {
@@ -115,58 +142,69 @@ namespace primeiroprojetoti48
                     txtResultado.Text = valor1.ToString() + " / " + valor2.ToString();
                     txtDisplay.Text = resultado.ToString();
                     break;
+
+                case "elevacao":
+                    valor2 = double.Parse(txtDisplay.Text);
+                    resultado = 1;
+                    for (int i = 1; i <= valor2; i++)
+                    {
+                        resultado *= valor1;
+                    }
+                    txtResultado.Text = valor1.ToString() + "^" + valor2.ToString();
+                    txtDisplay.Text = resultado.ToString();
+                    break;
             }
         }
 
-        private void btn1_Click(object sender, EventArgs e)
+        private void Btn1_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text += btn1.Text;
+            txtDisplay.Text += Btn1.Text;
         }
-        private void btn2_Click(object sender, EventArgs e)
+        private void Btn2_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text += btn2.Text;
+            txtDisplay.Text += Btn2.Text;
         }
-        private void btn3_Click(object sender, EventArgs e)
+        private void Btn3_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text += btn3.Text;
+            txtDisplay.Text += Btn3.Text;
         }
-        private void btn4_Click(object sender, EventArgs e)
+        private void Btn4_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text += btn4.Text;
+            txtDisplay.Text += Btn4.Text;
         }
-        private void btn5_Click(object sender, EventArgs e)
+        private void Btn5_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text += btn5.Text;
+            txtDisplay.Text += Btn5.Text;
         }
-        private void btn6_Click(object sender, EventArgs e)
+        private void Btn6_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text += btn6.Text;
+            txtDisplay.Text += Btn6.Text;
         }
-        private void btn7_Click(object sender, EventArgs e)
+        private void Btn7_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text += btn7.Text;
+            txtDisplay.Text += Btn7.Text;
         }
-        private void btn8_Click(object sender, EventArgs e)
+        private void Btn8_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text += btn8.Text;
+            txtDisplay.Text += Btn8.Text;
         }
-        private void btn9_Click(object sender, EventArgs e)
+        private void Btn9_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text += btn9.Text;
+            txtDisplay.Text += Btn9.Text;
         }
-        private void btnvirgula_Click(object sender, EventArgs e)
+        private void Btnvirgula_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text += btnVirgula.Text;
+            txtDisplay.Text += BtnVirgula.Text;
         }
-        private void btn0_Click(object sender, EventArgs e)
+        private void Btn0_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text += btn0.Text;
+            txtDisplay.Text += Btn0.Text;
         }
-        private void txt_NumA_TextChanged(object sender, EventArgs e)
+        private void Txt_NumA_TextChanged(object sender, EventArgs e)
         {
 
         }
-        private void txt_Resultado_TextChanged(object sender, EventArgs e)
+        private void Txt_Resultado_TextChanged(object sender, EventArgs e)
         {
 
         }
