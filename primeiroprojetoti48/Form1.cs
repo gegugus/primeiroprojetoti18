@@ -32,6 +32,19 @@ namespace primeiroprojetoti48
 
         }
 
+        private void BtnLimpar_Click(object sender, EventArgs e)
+        {
+            txtDisplay.Clear();
+            txtResultado.Clear();
+        }
+        private void BtnLimparChar_Click(object sender, EventArgs e)
+        {
+            if (txtDisplay.Text.Length > 0)
+            {
+                txtDisplay.Text = txtDisplay.Text.Substring(0, txtDisplay.Text.Length - 1);
+            }
+        }
+
         private void BtnMaisMenos_Click(object sender, EventArgs e)
         {
             valor1 = double.Parse(txtDisplay.Text);
@@ -42,10 +55,67 @@ namespace primeiroprojetoti48
 
         private void BtnPorcentagem_Click(object sender, EventArgs e)
         {
-            double porcentagem = resultado / 100;
-            txtDisplay.Text = porcentagem.ToString() + " % ";
+            double porcentagem;
+            valor1 = 0;
+
+            valor1 = double.Parse(txtDisplay.Text);
+
+            if (valor1 > 0)
+            {
+                porcentagem = valor1 / 100;
+                txtDisplay.Text = porcentagem.ToString() + " % ";
+            }
+            else
+            {
+                porcentagem = resultado / 100;
+                txtDisplay.Text = porcentagem.ToString() + " % ";
+            }
         }
 
+        private void BtnPi_Click(object sender, EventArgs e)
+        {
+            double pi = 3.14;
+
+            if (string.IsNullOrWhiteSpace(txtDisplay.Text))
+            {
+                txtDisplay.Text = pi.ToString();
+            }
+            else
+            {
+                valor1 = double.Parse(txtDisplay.Text);
+                pi = valor1 * pi;
+                txtDisplay.Text = pi.ToString();
+            }
+        }
+
+        private void BtnFatorial_Click(object sender, EventArgs e)
+        {
+            valor1 = double.Parse(txtDisplay.Text);
+            resultado = 1;
+
+            for (int i = 1; i <= valor1; i++)
+            {
+                resultado *= i;
+            }
+
+            txtDisplay.Text = valor1.ToString();
+            txtResultado.Text = resultado.ToString() + "!";
+        }
+
+        private void BtnEQuadrado_Click(object sender, EventArgs e)
+        {
+            valor1 = double.Parse(txtDisplay.Text);
+            resultado = valor1 * valor1;
+            txtDisplay.Text = resultado.ToString();
+            txtResultado.Text = valor1.ToString() + "²";
+        }
+        private void BtnECubo_Click(object sender, EventArgs e)
+        {
+            operacao = "elevacao";
+            valor1 = double.Parse(txtDisplay.Text);
+            txtResultado.Text = valor1.ToString() + "^";
+            txtDisplay.Clear();
+        }
         private void BtnAdicao_Click(object sender, EventArgs e)
         {
             operacao = "Adicao";
@@ -78,39 +148,6 @@ namespace primeiroprojetoti48
             txtDisplay.Clear();
         }
 
-        private void BtnLimpar_Click(object sender, EventArgs e)
-        {
-            txtDisplay.Clear();
-            txtResultado.Clear();
-        }
-        private void BtnFatorial_Click(object sender, EventArgs e)
-        {
-            valor1 = double.Parse(txtDisplay.Text);
-            resultado = 1;
-
-            for (int i = 1; i <= valor1; i++)
-            {
-                resultado *= i;
-            }
-
-            txtDisplay.Text = valor1.ToString();
-            txtResultado.Text = resultado.ToString() + "!";
-        }
-
-        private void BtnEQuadrado_Click(object sender, EventArgs e)
-        {
-            valor1 = double.Parse(txtDisplay.Text);
-            resultado = valor1 * valor1;
-            txtDisplay.Text = resultado.ToString();
-            txtResultado.Text = valor1.ToString() + "²";
-        }
-        private void BtnECubo_Click(object sender, EventArgs e)
-        {
-            operacao = "elevacao";
-            valor1 = double.Parse(txtDisplay.Text);
-            txtResultado.Text = valor1.ToString() + "^";
-            txtDisplay.Clear();
-        }
         private void BtnIgual_Click(object sender, EventArgs e)
         {
             switch (operacao)
@@ -200,6 +237,7 @@ namespace primeiroprojetoti48
         {
             txtDisplay.Text += Btn0.Text;
         }
+
         private void Txt_NumA_TextChanged(object sender, EventArgs e)
         {
 

@@ -52,6 +52,8 @@
             this.BtnFatorial = new System.Windows.Forms.Button();
             this.BtnEQuadrado = new System.Windows.Forms.Button();
             this.BtnECubo = new System.Windows.Forms.Button();
+            this.BtnPi = new System.Windows.Forms.Button();
+            this.BtnLimparChar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnAdicao
@@ -59,9 +61,9 @@
             this.BtnAdicao.BackColor = System.Drawing.Color.LightGray;
             this.BtnAdicao.FlatAppearance.BorderColor = System.Drawing.Color.IndianRed;
             this.BtnAdicao.FlatAppearance.BorderSize = 0;
-            this.BtnAdicao.Font = new System.Drawing.Font("Swis721 WGL4 BT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAdicao.Font = new System.Drawing.Font("Rubik", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAdicao.ForeColor = System.Drawing.Color.Black;
-            this.BtnAdicao.Location = new System.Drawing.Point(274, 392);
+            this.BtnAdicao.Location = new System.Drawing.Point(274, 362);
             this.BtnAdicao.Name = "BtnAdicao";
             this.BtnAdicao.Size = new System.Drawing.Size(80, 40);
             this.BtnAdicao.TabIndex = 0;
@@ -74,9 +76,9 @@
             this.BtnSubtracao.BackColor = System.Drawing.Color.LightGray;
             this.BtnSubtracao.FlatAppearance.BorderColor = System.Drawing.Color.IndianRed;
             this.BtnSubtracao.FlatAppearance.BorderSize = 0;
-            this.BtnSubtracao.Font = new System.Drawing.Font("Swis721 WGL4 BT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSubtracao.Font = new System.Drawing.Font("Rubik", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSubtracao.ForeColor = System.Drawing.Color.Black;
-            this.BtnSubtracao.Location = new System.Drawing.Point(274, 346);
+            this.BtnSubtracao.Location = new System.Drawing.Point(274, 316);
             this.BtnSubtracao.Name = "BtnSubtracao";
             this.BtnSubtracao.Size = new System.Drawing.Size(80, 40);
             this.BtnSubtracao.TabIndex = 0;
@@ -89,9 +91,9 @@
             this.BtnMultiplicacao.BackColor = System.Drawing.Color.LightGray;
             this.BtnMultiplicacao.FlatAppearance.BorderColor = System.Drawing.Color.IndianRed;
             this.BtnMultiplicacao.FlatAppearance.BorderSize = 0;
-            this.BtnMultiplicacao.Font = new System.Drawing.Font("Swis721 WGL4 BT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMultiplicacao.Font = new System.Drawing.Font("Rubik", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnMultiplicacao.ForeColor = System.Drawing.Color.Black;
-            this.BtnMultiplicacao.Location = new System.Drawing.Point(274, 300);
+            this.BtnMultiplicacao.Location = new System.Drawing.Point(274, 270);
             this.BtnMultiplicacao.Name = "BtnMultiplicacao";
             this.BtnMultiplicacao.Size = new System.Drawing.Size(80, 40);
             this.BtnMultiplicacao.TabIndex = 0;
@@ -104,9 +106,9 @@
             this.BtnDivisao.BackColor = System.Drawing.Color.LightGray;
             this.BtnDivisao.FlatAppearance.BorderColor = System.Drawing.Color.IndianRed;
             this.BtnDivisao.FlatAppearance.BorderSize = 0;
-            this.BtnDivisao.Font = new System.Drawing.Font("Swis721 WGL4 BT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDivisao.Font = new System.Drawing.Font("Rubik", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDivisao.ForeColor = System.Drawing.Color.Black;
-            this.BtnDivisao.Location = new System.Drawing.Point(274, 254);
+            this.BtnDivisao.Location = new System.Drawing.Point(274, 224);
             this.BtnDivisao.Name = "BtnDivisao";
             this.BtnDivisao.Size = new System.Drawing.Size(80, 40);
             this.BtnDivisao.TabIndex = 0;
@@ -117,28 +119,31 @@
             // txtDisplay
             // 
             this.txtDisplay.BackColor = System.Drawing.SystemColors.Window;
-            this.txtDisplay.Font = new System.Drawing.Font("Swis721 Hv BT", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDisplay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDisplay.Font = new System.Drawing.Font("Rubik Medium", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDisplay.Location = new System.Drawing.Point(16, 20);
             this.txtDisplay.Name = "txtDisplay";
-            this.txtDisplay.Size = new System.Drawing.Size(338, 65);
+            this.txtDisplay.Size = new System.Drawing.Size(338, 64);
             this.txtDisplay.TabIndex = 2;
             this.txtDisplay.TextChanged += new System.EventHandler(this.Txt_NumA_TextChanged);
             // 
             // txtResultado
             // 
             this.txtResultado.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtResultado.Font = new System.Drawing.Font("Swis721 Lt BT", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtResultado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtResultado.Font = new System.Drawing.Font("Rubik", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtResultado.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtResultado.Location = new System.Drawing.Point(16, 91);
             this.txtResultado.Name = "txtResultado";
-            this.txtResultado.Size = new System.Drawing.Size(338, 65);
+            this.txtResultado.Size = new System.Drawing.Size(338, 35);
             this.txtResultado.TabIndex = 2;
             this.txtResultado.TextChanged += new System.EventHandler(this.Txt_Resultado_TextChanged);
             // 
             // Btn7
             // 
-            this.Btn7.Font = new System.Drawing.Font("Swis721 WGL4 BT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn7.Font = new System.Drawing.Font("Rubik", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn7.ForeColor = System.Drawing.Color.Black;
-            this.Btn7.Location = new System.Drawing.Point(16, 254);
+            this.Btn7.Location = new System.Drawing.Point(16, 224);
             this.Btn7.Name = "Btn7";
             this.Btn7.Size = new System.Drawing.Size(80, 40);
             this.Btn7.TabIndex = 3;
@@ -148,9 +153,9 @@
             // 
             // Btn8
             // 
-            this.Btn8.Font = new System.Drawing.Font("Swis721 WGL4 BT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn8.Font = new System.Drawing.Font("Rubik", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn8.ForeColor = System.Drawing.Color.Black;
-            this.Btn8.Location = new System.Drawing.Point(102, 254);
+            this.Btn8.Location = new System.Drawing.Point(102, 224);
             this.Btn8.Name = "Btn8";
             this.Btn8.Size = new System.Drawing.Size(80, 40);
             this.Btn8.TabIndex = 3;
@@ -160,9 +165,9 @@
             // 
             // Btn9
             // 
-            this.Btn9.Font = new System.Drawing.Font("Swis721 WGL4 BT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn9.Font = new System.Drawing.Font("Rubik", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn9.ForeColor = System.Drawing.Color.Black;
-            this.Btn9.Location = new System.Drawing.Point(188, 254);
+            this.Btn9.Location = new System.Drawing.Point(188, 224);
             this.Btn9.Name = "Btn9";
             this.Btn9.Size = new System.Drawing.Size(80, 40);
             this.Btn9.TabIndex = 3;
@@ -172,9 +177,9 @@
             // 
             // Btn4
             // 
-            this.Btn4.Font = new System.Drawing.Font("Swis721 WGL4 BT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn4.Font = new System.Drawing.Font("Rubik", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn4.ForeColor = System.Drawing.Color.Black;
-            this.Btn4.Location = new System.Drawing.Point(16, 300);
+            this.Btn4.Location = new System.Drawing.Point(16, 270);
             this.Btn4.Name = "Btn4";
             this.Btn4.Size = new System.Drawing.Size(80, 40);
             this.Btn4.TabIndex = 3;
@@ -184,9 +189,9 @@
             // 
             // Btn5
             // 
-            this.Btn5.Font = new System.Drawing.Font("Swis721 WGL4 BT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn5.Font = new System.Drawing.Font("Rubik", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn5.ForeColor = System.Drawing.Color.Black;
-            this.Btn5.Location = new System.Drawing.Point(102, 300);
+            this.Btn5.Location = new System.Drawing.Point(102, 270);
             this.Btn5.Name = "Btn5";
             this.Btn5.Size = new System.Drawing.Size(80, 40);
             this.Btn5.TabIndex = 3;
@@ -196,9 +201,9 @@
             // 
             // Btn6
             // 
-            this.Btn6.Font = new System.Drawing.Font("Swis721 WGL4 BT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn6.Font = new System.Drawing.Font("Rubik", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn6.ForeColor = System.Drawing.Color.Black;
-            this.Btn6.Location = new System.Drawing.Point(188, 300);
+            this.Btn6.Location = new System.Drawing.Point(188, 270);
             this.Btn6.Name = "Btn6";
             this.Btn6.Size = new System.Drawing.Size(80, 40);
             this.Btn6.TabIndex = 3;
@@ -208,9 +213,9 @@
             // 
             // Btn1
             // 
-            this.Btn1.Font = new System.Drawing.Font("Swis721 WGL4 BT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn1.Font = new System.Drawing.Font("Rubik", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn1.ForeColor = System.Drawing.Color.Black;
-            this.Btn1.Location = new System.Drawing.Point(16, 346);
+            this.Btn1.Location = new System.Drawing.Point(16, 316);
             this.Btn1.Name = "Btn1";
             this.Btn1.Size = new System.Drawing.Size(80, 40);
             this.Btn1.TabIndex = 3;
@@ -220,9 +225,9 @@
             // 
             // Btn2
             // 
-            this.Btn2.Font = new System.Drawing.Font("Swis721 WGL4 BT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn2.Font = new System.Drawing.Font("Rubik", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn2.ForeColor = System.Drawing.Color.Black;
-            this.Btn2.Location = new System.Drawing.Point(102, 346);
+            this.Btn2.Location = new System.Drawing.Point(102, 316);
             this.Btn2.Name = "Btn2";
             this.Btn2.Size = new System.Drawing.Size(80, 40);
             this.Btn2.TabIndex = 3;
@@ -232,9 +237,9 @@
             // 
             // Btn3
             // 
-            this.Btn3.Font = new System.Drawing.Font("Swis721 WGL4 BT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn3.Font = new System.Drawing.Font("Rubik", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn3.ForeColor = System.Drawing.Color.Black;
-            this.Btn3.Location = new System.Drawing.Point(188, 346);
+            this.Btn3.Location = new System.Drawing.Point(188, 316);
             this.Btn3.Name = "Btn3";
             this.Btn3.Size = new System.Drawing.Size(80, 40);
             this.Btn3.TabIndex = 3;
@@ -244,9 +249,9 @@
             // 
             // BtnVirgula
             // 
-            this.BtnVirgula.Font = new System.Drawing.Font("Swis721 WGL4 BT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnVirgula.Font = new System.Drawing.Font("Rubik", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnVirgula.ForeColor = System.Drawing.Color.Black;
-            this.BtnVirgula.Location = new System.Drawing.Point(16, 392);
+            this.BtnVirgula.Location = new System.Drawing.Point(16, 362);
             this.BtnVirgula.Name = "BtnVirgula";
             this.BtnVirgula.Size = new System.Drawing.Size(80, 40);
             this.BtnVirgula.TabIndex = 3;
@@ -256,9 +261,9 @@
             // 
             // Btn0
             // 
-            this.Btn0.Font = new System.Drawing.Font("Swis721 WGL4 BT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn0.Font = new System.Drawing.Font("Rubik", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn0.ForeColor = System.Drawing.Color.Black;
-            this.Btn0.Location = new System.Drawing.Point(102, 392);
+            this.Btn0.Location = new System.Drawing.Point(102, 362);
             this.Btn0.Name = "Btn0";
             this.Btn0.Size = new System.Drawing.Size(80, 40);
             this.Btn0.TabIndex = 3;
@@ -269,9 +274,9 @@
             // BtnIgual
             // 
             this.BtnIgual.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BtnIgual.Font = new System.Drawing.Font("Swis721 WGL4 BT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnIgual.Font = new System.Drawing.Font("Rubik", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnIgual.ForeColor = System.Drawing.Color.Black;
-            this.BtnIgual.Location = new System.Drawing.Point(188, 392);
+            this.BtnIgual.Location = new System.Drawing.Point(188, 362);
             this.BtnIgual.Name = "BtnIgual";
             this.BtnIgual.Size = new System.Drawing.Size(80, 40);
             this.BtnIgual.TabIndex = 3;
@@ -282,9 +287,9 @@
             // BtnPorcentagem
             // 
             this.BtnPorcentagem.BackColor = System.Drawing.Color.LightGray;
-            this.BtnPorcentagem.Font = new System.Drawing.Font("Swis721 WGL4 BT", 18F, System.Drawing.FontStyle.Bold);
+            this.BtnPorcentagem.Font = new System.Drawing.Font("Rubik", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPorcentagem.ForeColor = System.Drawing.Color.Black;
-            this.BtnPorcentagem.Location = new System.Drawing.Point(274, 162);
+            this.BtnPorcentagem.Location = new System.Drawing.Point(274, 132);
             this.BtnPorcentagem.Name = "BtnPorcentagem";
             this.BtnPorcentagem.Size = new System.Drawing.Size(80, 40);
             this.BtnPorcentagem.TabIndex = 4;
@@ -295,9 +300,9 @@
             // BtnMaisMenos
             // 
             this.BtnMaisMenos.BackColor = System.Drawing.Color.LightGray;
-            this.BtnMaisMenos.Font = new System.Drawing.Font("Swis721 WGL4 BT", 18F, System.Drawing.FontStyle.Bold);
+            this.BtnMaisMenos.Font = new System.Drawing.Font("Rubik", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnMaisMenos.ForeColor = System.Drawing.Color.Black;
-            this.BtnMaisMenos.Location = new System.Drawing.Point(188, 162);
+            this.BtnMaisMenos.Location = new System.Drawing.Point(188, 132);
             this.BtnMaisMenos.Name = "BtnMaisMenos";
             this.BtnMaisMenos.Size = new System.Drawing.Size(80, 40);
             this.BtnMaisMenos.TabIndex = 5;
@@ -307,10 +312,10 @@
             // 
             // BtnLimpar
             // 
-            this.BtnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.BtnLimpar.Font = new System.Drawing.Font("Swis721 WGL4 BT", 18F, System.Drawing.FontStyle.Bold);
+            this.BtnLimpar.BackColor = System.Drawing.Color.DarkSalmon;
+            this.BtnLimpar.Font = new System.Drawing.Font("Rubik", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLimpar.ForeColor = System.Drawing.Color.Black;
-            this.BtnLimpar.Location = new System.Drawing.Point(16, 162);
+            this.BtnLimpar.Location = new System.Drawing.Point(16, 132);
             this.BtnLimpar.Name = "BtnLimpar";
             this.BtnLimpar.Size = new System.Drawing.Size(80, 40);
             this.BtnLimpar.TabIndex = 6;
@@ -321,9 +326,9 @@
             // BtnFatorial
             // 
             this.BtnFatorial.BackColor = System.Drawing.Color.LightGray;
-            this.BtnFatorial.Font = new System.Drawing.Font("Swis721 WGL4 BT", 18F, System.Drawing.FontStyle.Bold);
+            this.BtnFatorial.Font = new System.Drawing.Font("Rubik", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnFatorial.ForeColor = System.Drawing.Color.Black;
-            this.BtnFatorial.Location = new System.Drawing.Point(102, 162);
+            this.BtnFatorial.Location = new System.Drawing.Point(102, 132);
             this.BtnFatorial.Name = "BtnFatorial";
             this.BtnFatorial.Size = new System.Drawing.Size(80, 40);
             this.BtnFatorial.TabIndex = 7;
@@ -334,9 +339,9 @@
             // BtnEQuadrado
             // 
             this.BtnEQuadrado.BackColor = System.Drawing.Color.LightGray;
-            this.BtnEQuadrado.Font = new System.Drawing.Font("Swis721 WGL4 BT", 18F, System.Drawing.FontStyle.Bold);
+            this.BtnEQuadrado.Font = new System.Drawing.Font("Rubik", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEQuadrado.ForeColor = System.Drawing.Color.Black;
-            this.BtnEQuadrado.Location = new System.Drawing.Point(16, 208);
+            this.BtnEQuadrado.Location = new System.Drawing.Point(274, 178);
             this.BtnEQuadrado.Name = "BtnEQuadrado";
             this.BtnEQuadrado.Size = new System.Drawing.Size(80, 40);
             this.BtnEQuadrado.TabIndex = 8;
@@ -347,22 +352,48 @@
             // BtnECubo
             // 
             this.BtnECubo.BackColor = System.Drawing.Color.LightGray;
-            this.BtnECubo.Font = new System.Drawing.Font("Swis721 WGL4 BT", 18F, System.Drawing.FontStyle.Bold);
+            this.BtnECubo.Font = new System.Drawing.Font("Rubik", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnECubo.ForeColor = System.Drawing.Color.Black;
-            this.BtnECubo.Location = new System.Drawing.Point(102, 208);
+            this.BtnECubo.Location = new System.Drawing.Point(188, 178);
             this.BtnECubo.Name = "BtnECubo";
             this.BtnECubo.Size = new System.Drawing.Size(80, 40);
             this.BtnECubo.TabIndex = 9;
-            this.BtnECubo.Text = "xy";
+            this.BtnECubo.Text = "x^y";
             this.BtnECubo.UseVisualStyleBackColor = false;
             this.BtnECubo.Click += new System.EventHandler(this.BtnECubo_Click);
+            // 
+            // BtnPi
+            // 
+            this.BtnPi.BackColor = System.Drawing.Color.LightGray;
+            this.BtnPi.Font = new System.Drawing.Font("Rubik", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPi.Location = new System.Drawing.Point(102, 178);
+            this.BtnPi.Name = "BtnPi";
+            this.BtnPi.Size = new System.Drawing.Size(80, 40);
+            this.BtnPi.TabIndex = 10;
+            this.BtnPi.Text = "π";
+            this.BtnPi.UseVisualStyleBackColor = false;
+            this.BtnPi.Click += new System.EventHandler(this.BtnPi_Click);
+            // 
+            // BtnLimparChar
+            // 
+            this.BtnLimparChar.BackColor = System.Drawing.Color.DarkSalmon;
+            this.BtnLimparChar.Font = new System.Drawing.Font("Rubik", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLimparChar.Location = new System.Drawing.Point(16, 178);
+            this.BtnLimparChar.Name = "BtnLimparChar";
+            this.BtnLimparChar.Size = new System.Drawing.Size(80, 40);
+            this.BtnLimparChar.TabIndex = 11;
+            this.BtnLimparChar.Text = "CE";
+            this.BtnLimparChar.UseVisualStyleBackColor = false;
+            this.BtnLimparChar.Click += new System.EventHandler(this.BtnLimparChar_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(368, 451);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(368, 419);
+            this.Controls.Add(this.BtnLimparChar);
+            this.Controls.Add(this.BtnPi);
             this.Controls.Add(this.BtnECubo);
             this.Controls.Add(this.BtnEQuadrado);
             this.Controls.Add(this.BtnFatorial);
@@ -388,7 +419,7 @@
             this.Controls.Add(this.BtnSubtracao);
             this.Controls.Add(this.BtnAdicao);
             this.Name = "Form1";
-            this.Text = "Calculadora v1.2";
+            this.Text = "Calculadora v1.3";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -421,6 +452,8 @@
         private System.Windows.Forms.Button BtnFatorial;
         private System.Windows.Forms.Button BtnEQuadrado;
         private System.Windows.Forms.Button BtnECubo;
+        private System.Windows.Forms.Button BtnPi;
+        private System.Windows.Forms.Button BtnLimparChar;
     }
 }
 
