@@ -73,7 +73,7 @@
             this.TxtNome.Location = new System.Drawing.Point(25, 74);
             this.TxtNome.Name = "TxtNome";
             this.TxtNome.Size = new System.Drawing.Size(446, 26);
-            this.TxtNome.TabIndex = 1;
+            this.TxtNome.TabIndex = 0;
             // 
             // LblEmail
             // 
@@ -95,7 +95,7 @@
             this.TxtEmail.Location = new System.Drawing.Point(25, 171);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(446, 26);
-            this.TxtEmail.TabIndex = 1;
+            this.TxtEmail.TabIndex = 2;
             // 
             // LblTelefone
             // 
@@ -116,7 +116,7 @@
             this.TxtTelefone.Location = new System.Drawing.Point(507, 171);
             this.TxtTelefone.Name = "TxtTelefone";
             this.TxtTelefone.Size = new System.Drawing.Size(226, 26);
-            this.TxtTelefone.TabIndex = 1;
+            this.TxtTelefone.TabIndex = 3;
             // 
             // LblInfomacoes
             // 
@@ -171,6 +171,7 @@
             this.DataGridVisu.Name = "DataGridVisu";
             this.DataGridVisu.Size = new System.Drawing.Size(708, 182);
             this.DataGridVisu.TabIndex = 2;
+            this.DataGridVisu.TabStop = false;
             this.DataGridVisu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_Click);
             // 
             // DtpData
@@ -183,7 +184,8 @@
             this.DtpData.Name = "DtpData";
             this.DtpData.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.DtpData.Size = new System.Drawing.Size(708, 26);
-            this.DtpData.TabIndex = 3;
+            this.DtpData.TabIndex = 4;
+            this.DtpData.TabStop = false;
             // 
             // LblRegistros
             // 
@@ -206,6 +208,7 @@
             this.BtnAdicionar.Name = "BtnAdicionar";
             this.BtnAdicionar.Size = new System.Drawing.Size(170, 40);
             this.BtnAdicionar.TabIndex = 4;
+            this.BtnAdicionar.TabStop = false;
             this.BtnAdicionar.Text = "Adicionar";
             this.BtnAdicionar.UseVisualStyleBackColor = false;
             this.BtnAdicionar.Click += new System.EventHandler(this.BtnAdicionar_Click);
@@ -220,6 +223,7 @@
             this.BtnExcluir.Name = "BtnExcluir";
             this.BtnExcluir.Size = new System.Drawing.Size(170, 40);
             this.BtnExcluir.TabIndex = 4;
+            this.BtnExcluir.TabStop = false;
             this.BtnExcluir.Text = "Excluir";
             this.BtnExcluir.UseVisualStyleBackColor = false;
             this.BtnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
@@ -234,6 +238,7 @@
             this.BtnPesquisar.Name = "BtnPesquisar";
             this.BtnPesquisar.Size = new System.Drawing.Size(170, 40);
             this.BtnPesquisar.TabIndex = 4;
+            this.BtnPesquisar.TabStop = false;
             this.BtnPesquisar.Text = "Pesquisar";
             this.BtnPesquisar.UseVisualStyleBackColor = false;
             this.BtnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
@@ -248,6 +253,7 @@
             this.BtnAlterar.Name = "BtnAlterar";
             this.BtnAlterar.Size = new System.Drawing.Size(170, 40);
             this.BtnAlterar.TabIndex = 4;
+            this.BtnAlterar.TabStop = false;
             this.BtnAlterar.Text = "Alterar";
             this.BtnAlterar.UseVisualStyleBackColor = false;
             this.BtnAlterar.Click += new System.EventHandler(this.BtnAlterar_Click);
@@ -310,6 +316,7 @@
             this.TxtID.ReadOnly = true;
             this.TxtID.Size = new System.Drawing.Size(96, 26);
             this.TxtID.TabIndex = 1;
+            this.TxtID.TabStop = false;
             // 
             // BtnMostrarDados
             // 
@@ -320,7 +327,8 @@
             this.BtnMostrarDados.Name = "BtnMostrarDados";
             this.BtnMostrarDados.Size = new System.Drawing.Size(708, 40);
             this.BtnMostrarDados.TabIndex = 4;
-            this.BtnMostrarDados.Text = "Mostrar Dados";
+            this.BtnMostrarDados.TabStop = false;
+            this.BtnMostrarDados.Text = "Atualizar Dados";
             this.BtnMostrarDados.UseVisualStyleBackColor = false;
             this.BtnMostrarDados.Click += new System.EventHandler(this.BtnMostrarDados_Click);
             // 
