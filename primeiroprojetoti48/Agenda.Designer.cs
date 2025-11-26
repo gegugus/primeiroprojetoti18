@@ -1,6 +1,6 @@
 ﻿namespace primeiroprojetoti48
 {
-    partial class Form2
+    partial class Agenda
     {
         /// <summary>
         /// Required designer variable.
@@ -38,7 +38,7 @@
             this.LblIdade = new System.Windows.Forms.Label();
             this.TxtIdade = new System.Windows.Forms.TextBox();
             this.LblContato = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DataGridVisu = new System.Windows.Forms.DataGridView();
             this.DtpData = new System.Windows.Forms.DateTimePicker();
             this.LblRegistros = new System.Windows.Forms.Label();
             this.BtnAdicionar = new System.Windows.Forms.Button();
@@ -49,8 +49,9 @@
             this.Lbl_Copyright = new System.Windows.Forms.Label();
             this.LblLink = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.TxtID = new System.Windows.Forms.TextBox();
+            this.BtnMostrarDados = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridVisu)).BeginInit();
             this.SuspendLayout();
             // 
             // LblNome
@@ -160,16 +161,17 @@
             this.LblContato.TabIndex = 0;
             this.LblContato.Text = "Contato";
             // 
-            // dataGridView1
+            // DataGridVisu
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DataGridVisu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 250);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(708, 164);
-            this.dataGridView1.TabIndex = 2;
+            this.DataGridVisu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridVisu.Location = new System.Drawing.Point(25, 250);
+            this.DataGridVisu.Name = "DataGridVisu";
+            this.DataGridVisu.Size = new System.Drawing.Size(708, 182);
+            this.DataGridVisu.TabIndex = 2;
+            this.DataGridVisu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_Click);
             // 
             // DtpData
             // 
@@ -177,7 +179,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DtpData.Cursor = System.Windows.Forms.Cursors.Default;
             this.DtpData.Font = new System.Drawing.Font("Rubik", 12F);
-            this.DtpData.Location = new System.Drawing.Point(25, 421);
+            this.DtpData.Location = new System.Drawing.Point(25, 438);
             this.DtpData.Name = "DtpData";
             this.DtpData.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.DtpData.Size = new System.Drawing.Size(708, 26);
@@ -200,12 +202,13 @@
             this.BtnAdicionar.AutoSize = true;
             this.BtnAdicionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(189)))), ((int)(((byte)(121)))));
             this.BtnAdicionar.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAdicionar.Location = new System.Drawing.Point(25, 469);
+            this.BtnAdicionar.Location = new System.Drawing.Point(25, 486);
             this.BtnAdicionar.Name = "BtnAdicionar";
             this.BtnAdicionar.Size = new System.Drawing.Size(170, 40);
             this.BtnAdicionar.TabIndex = 4;
             this.BtnAdicionar.Text = "Adicionar";
             this.BtnAdicionar.UseVisualStyleBackColor = false;
+            this.BtnAdicionar.Click += new System.EventHandler(this.BtnAdicionar_Click);
             // 
             // BtnExcluir
             // 
@@ -213,12 +216,13 @@
             this.BtnExcluir.AutoSize = true;
             this.BtnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(124)))), ((int)(((byte)(121)))));
             this.BtnExcluir.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnExcluir.Location = new System.Drawing.Point(563, 469);
+            this.BtnExcluir.Location = new System.Drawing.Point(563, 486);
             this.BtnExcluir.Name = "BtnExcluir";
             this.BtnExcluir.Size = new System.Drawing.Size(170, 40);
             this.BtnExcluir.TabIndex = 4;
             this.BtnExcluir.Text = "Excluir";
             this.BtnExcluir.UseVisualStyleBackColor = false;
+            this.BtnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
             // BtnPesquisar
             // 
@@ -226,12 +230,13 @@
             this.BtnPesquisar.AutoSize = true;
             this.BtnPesquisar.BackColor = System.Drawing.Color.LightGray;
             this.BtnPesquisar.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPesquisar.Location = new System.Drawing.Point(383, 469);
+            this.BtnPesquisar.Location = new System.Drawing.Point(383, 486);
             this.BtnPesquisar.Name = "BtnPesquisar";
             this.BtnPesquisar.Size = new System.Drawing.Size(170, 40);
             this.BtnPesquisar.TabIndex = 4;
             this.BtnPesquisar.Text = "Pesquisar";
             this.BtnPesquisar.UseVisualStyleBackColor = false;
+            this.BtnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
             // 
             // BtnAlterar
             // 
@@ -239,19 +244,20 @@
             this.BtnAlterar.AutoSize = true;
             this.BtnAlterar.BackColor = System.Drawing.Color.LightGray;
             this.BtnAlterar.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAlterar.Location = new System.Drawing.Point(205, 469);
+            this.BtnAlterar.Location = new System.Drawing.Point(205, 486);
             this.BtnAlterar.Name = "BtnAlterar";
             this.BtnAlterar.Size = new System.Drawing.Size(170, 40);
             this.BtnAlterar.TabIndex = 4;
             this.BtnAlterar.Text = "Alterar";
             this.BtnAlterar.UseVisualStyleBackColor = false;
+            this.BtnAlterar.Click += new System.EventHandler(this.BtnAlterar_Click);
             // 
             // Lbl_Rodape
             // 
             this.Lbl_Rodape.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Lbl_Rodape.AutoSize = true;
             this.Lbl_Rodape.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Rodape.Location = new System.Drawing.Point(22, 530);
+            this.Lbl_Rodape.Location = new System.Drawing.Point(22, 605);
             this.Lbl_Rodape.Name = "Lbl_Rodape";
             this.Lbl_Rodape.Size = new System.Drawing.Size(152, 17);
             this.Lbl_Rodape.TabIndex = 5;
@@ -262,7 +268,7 @@
             this.Lbl_Copyright.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Lbl_Copyright.AutoSize = true;
             this.Lbl_Copyright.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Copyright.Location = new System.Drawing.Point(587, 530);
+            this.Lbl_Copyright.Location = new System.Drawing.Point(587, 605);
             this.Lbl_Copyright.Name = "Lbl_Copyright";
             this.Lbl_Copyright.Size = new System.Drawing.Size(96, 17);
             this.Lbl_Copyright.TabIndex = 5;
@@ -273,7 +279,7 @@
             this.LblLink.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LblLink.AutoSize = true;
             this.LblLink.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLink.Location = new System.Drawing.Point(689, 530);
+            this.LblLink.Location = new System.Drawing.Point(689, 605);
             this.LblLink.Name = "LblLink";
             this.LblLink.Size = new System.Drawing.Size(44, 17);
             this.LblLink.TabIndex = 6;
@@ -292,24 +298,39 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ID";
             // 
-            // textBox1
+            // TxtID
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(637, 74);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(96, 26);
-            this.textBox1.TabIndex = 1;
+            this.TxtID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtID.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtID.Cursor = System.Windows.Forms.Cursors.No;
+            this.TxtID.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtID.Location = new System.Drawing.Point(637, 74);
+            this.TxtID.Name = "TxtID";
+            this.TxtID.ReadOnly = true;
+            this.TxtID.Size = new System.Drawing.Size(96, 26);
+            this.TxtID.TabIndex = 1;
             // 
-            // Form2
+            // BtnMostrarDados
+            // 
+            this.BtnMostrarDados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnMostrarDados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(180)))), ((int)(((byte)(214)))));
+            this.BtnMostrarDados.Font = new System.Drawing.Font("Rubik", 14.25F);
+            this.BtnMostrarDados.Location = new System.Drawing.Point(25, 532);
+            this.BtnMostrarDados.Name = "BtnMostrarDados";
+            this.BtnMostrarDados.Size = new System.Drawing.Size(708, 40);
+            this.BtnMostrarDados.TabIndex = 4;
+            this.BtnMostrarDados.Text = "Mostrar Dados";
+            this.BtnMostrarDados.UseVisualStyleBackColor = false;
+            this.BtnMostrarDados.Click += new System.EventHandler(this.BtnMostrarDados_Click);
+            // 
+            // Agenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(756, 562);
+            this.ClientSize = new System.Drawing.Size(756, 637);
+            this.Controls.Add(this.BtnMostrarDados);
             this.Controls.Add(this.LblLink);
             this.Controls.Add(this.Lbl_Copyright);
             this.Controls.Add(this.Lbl_Rodape);
@@ -318,12 +339,12 @@
             this.Controls.Add(this.BtnAlterar);
             this.Controls.Add(this.BtnAdicionar);
             this.Controls.Add(this.DtpData);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DataGridVisu);
             this.Controls.Add(this.TxtTelefone);
             this.Controls.Add(this.LblTelefone);
             this.Controls.Add(this.TxtEmail);
             this.Controls.Add(this.LblEmail);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtID);
             this.Controls.Add(this.TxtIdade);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtNome);
@@ -332,10 +353,10 @@
             this.Controls.Add(this.LblContato);
             this.Controls.Add(this.LblInfomacoes);
             this.Controls.Add(this.LblNome);
-            this.Name = "Form2";
+            this.Name = "Agenda";
             this.Text = "CADASTRO DE AGENDA V1.0";
-            this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Agenda_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridVisu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,7 +374,7 @@
         private System.Windows.Forms.Label LblIdade;
         private System.Windows.Forms.TextBox TxtIdade;
         private System.Windows.Forms.Label LblContato;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DataGridVisu;
         private System.Windows.Forms.DateTimePicker DtpData;
         private System.Windows.Forms.Label LblRegistros;
         private System.Windows.Forms.Button BtnAdicionar;
@@ -364,6 +385,7 @@
         private System.Windows.Forms.Label Lbl_Copyright;
         private System.Windows.Forms.LinkLabel LblLink;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtID;
+        private System.Windows.Forms.Button BtnMostrarDados;
     }
 }
