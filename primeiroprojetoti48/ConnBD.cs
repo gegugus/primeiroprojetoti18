@@ -9,12 +9,13 @@ namespace primeiroprojetoti48
 {
     public static class ConnBD
     {
-        private static string connectionString = @"Server=.\BDSENAC;Database=AgendaDB;User Id=senaclivre;Password=senaclivre;";
+        private static string connectionString =
+            @"Server=.\BDSENAC;Database=CadastroClienteDB;User Id=senaclivre;Password=senaclivre;";
+
         public static SqlConnection GetConnection()
         {
-            SqlConnection conn = new SqlConnection(connectionString);
-            conn.Open();
-            return conn;
+            return new SqlConnection(connectionString); 
         }
     }
+
 }

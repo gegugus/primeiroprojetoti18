@@ -16,7 +16,7 @@ namespace primeiroprojetoti48
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Agenda());
+            Application.Run(new CadastroClientes());
         }
     }
 }

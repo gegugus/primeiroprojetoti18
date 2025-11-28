@@ -84,6 +84,18 @@ namespace primeiroprojetoti48
 
         private void BtnAdicionar_Click(object sender, EventArgs e)
         {
+            if (TxtNome.Text == "")
+            {
+                MessageBox.Show("Informe o nome!");
+                return;
+            }
+
+            if (!Regex.IsMatch(TxtEmail.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            {
+                MessageBox.Show("E-mail inválido!");
+                return;
+            }
+
             try
             {
                 using (var conn = ConnBD.GetConnection())
@@ -179,6 +191,7 @@ namespace primeiroprojetoti48
                 da.Fill(dt);
                 DataGridVisu.DataSource = dt;
             }
+            LimparCampos();
         }
 
         private void BtnPesquisar_Click(object sender, EventArgs e)
@@ -200,6 +213,12 @@ namespace primeiroprojetoti48
                 da.Fill(dt);
                 DataGridVisu.DataSource = dt;
             }
+        }
+
+        private void BtnCalculadora_Click(object sender, EventArgs e)
+        {
+            Form1 f2 = new Form1();
+            f2.Show();
         }
     }
 }

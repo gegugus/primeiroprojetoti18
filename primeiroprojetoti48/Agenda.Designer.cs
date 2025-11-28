@@ -51,6 +51,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TxtID = new System.Windows.Forms.TextBox();
             this.BtnMostrarDados = new System.Windows.Forms.Button();
+            this.BtnCalculadora = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridVisu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -169,7 +170,7 @@
             this.DataGridVisu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridVisu.Location = new System.Drawing.Point(25, 250);
             this.DataGridVisu.Name = "DataGridVisu";
-            this.DataGridVisu.Size = new System.Drawing.Size(708, 182);
+            this.DataGridVisu.Size = new System.Drawing.Size(708, 208);
             this.DataGridVisu.TabIndex = 2;
             this.DataGridVisu.TabStop = false;
             this.DataGridVisu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_Click);
@@ -180,7 +181,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DtpData.Cursor = System.Windows.Forms.Cursors.Default;
             this.DtpData.Font = new System.Drawing.Font("Rubik", 12F);
-            this.DtpData.Location = new System.Drawing.Point(25, 438);
+            this.DtpData.Location = new System.Drawing.Point(25, 464);
             this.DtpData.Name = "DtpData";
             this.DtpData.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.DtpData.Size = new System.Drawing.Size(708, 26);
@@ -204,7 +205,7 @@
             this.BtnAdicionar.AutoSize = true;
             this.BtnAdicionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(189)))), ((int)(((byte)(121)))));
             this.BtnAdicionar.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAdicionar.Location = new System.Drawing.Point(25, 486);
+            this.BtnAdicionar.Location = new System.Drawing.Point(25, 505);
             this.BtnAdicionar.Name = "BtnAdicionar";
             this.BtnAdicionar.Size = new System.Drawing.Size(170, 40);
             this.BtnAdicionar.TabIndex = 4;
@@ -219,7 +220,7 @@
             this.BtnExcluir.AutoSize = true;
             this.BtnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(124)))), ((int)(((byte)(121)))));
             this.BtnExcluir.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnExcluir.Location = new System.Drawing.Point(563, 486);
+            this.BtnExcluir.Location = new System.Drawing.Point(563, 505);
             this.BtnExcluir.Name = "BtnExcluir";
             this.BtnExcluir.Size = new System.Drawing.Size(170, 40);
             this.BtnExcluir.TabIndex = 4;
@@ -234,7 +235,7 @@
             this.BtnPesquisar.AutoSize = true;
             this.BtnPesquisar.BackColor = System.Drawing.Color.LightGray;
             this.BtnPesquisar.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPesquisar.Location = new System.Drawing.Point(383, 486);
+            this.BtnPesquisar.Location = new System.Drawing.Point(383, 505);
             this.BtnPesquisar.Name = "BtnPesquisar";
             this.BtnPesquisar.Size = new System.Drawing.Size(170, 40);
             this.BtnPesquisar.TabIndex = 4;
@@ -249,7 +250,7 @@
             this.BtnAlterar.AutoSize = true;
             this.BtnAlterar.BackColor = System.Drawing.Color.LightGray;
             this.BtnAlterar.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAlterar.Location = new System.Drawing.Point(205, 486);
+            this.BtnAlterar.Location = new System.Drawing.Point(205, 505);
             this.BtnAlterar.Name = "BtnAlterar";
             this.BtnAlterar.Size = new System.Drawing.Size(170, 40);
             this.BtnAlterar.TabIndex = 4;
@@ -263,18 +264,18 @@
             this.Lbl_Rodape.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Lbl_Rodape.AutoSize = true;
             this.Lbl_Rodape.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Rodape.Location = new System.Drawing.Point(22, 605);
+            this.Lbl_Rodape.Location = new System.Drawing.Point(22, 617);
             this.Lbl_Rodape.Name = "Lbl_Rodape";
-            this.Lbl_Rodape.Size = new System.Drawing.Size(152, 17);
+            this.Lbl_Rodape.Size = new System.Drawing.Size(137, 17);
             this.Lbl_Rodape.TabIndex = 5;
-            this.Lbl_Rodape.Text = "Cadastro de Agenda vAlpha";
+            this.Lbl_Rodape.Text = "Cadastro de Agenda v1.0";
             // 
             // Lbl_Copyright
             // 
             this.Lbl_Copyright.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Lbl_Copyright.AutoSize = true;
             this.Lbl_Copyright.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Copyright.Location = new System.Drawing.Point(587, 605);
+            this.Lbl_Copyright.Location = new System.Drawing.Point(587, 617);
             this.Lbl_Copyright.Name = "Lbl_Copyright";
             this.Lbl_Copyright.Size = new System.Drawing.Size(96, 17);
             this.Lbl_Copyright.TabIndex = 5;
@@ -285,7 +286,7 @@
             this.LblLink.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LblLink.AutoSize = true;
             this.LblLink.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLink.Location = new System.Drawing.Point(689, 605);
+            this.LblLink.Location = new System.Drawing.Point(689, 617);
             this.LblLink.Name = "LblLink";
             this.LblLink.Size = new System.Drawing.Size(44, 17);
             this.LblLink.TabIndex = 6;
@@ -323,21 +324,35 @@
             this.BtnMostrarDados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnMostrarDados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(180)))), ((int)(((byte)(214)))));
             this.BtnMostrarDados.Font = new System.Drawing.Font("Rubik", 14.25F);
-            this.BtnMostrarDados.Location = new System.Drawing.Point(25, 532);
+            this.BtnMostrarDados.Location = new System.Drawing.Point(25, 551);
             this.BtnMostrarDados.Name = "BtnMostrarDados";
-            this.BtnMostrarDados.Size = new System.Drawing.Size(708, 40);
+            this.BtnMostrarDados.Size = new System.Drawing.Size(350, 40);
             this.BtnMostrarDados.TabIndex = 4;
             this.BtnMostrarDados.TabStop = false;
             this.BtnMostrarDados.Text = "Atualizar Dados";
             this.BtnMostrarDados.UseVisualStyleBackColor = false;
             this.BtnMostrarDados.Click += new System.EventHandler(this.BtnMostrarDados_Click);
             // 
+            // BtnCalculadora
+            // 
+            this.BtnCalculadora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnCalculadora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(194)))), ((int)(((byte)(149)))));
+            this.BtnCalculadora.Font = new System.Drawing.Font("Rubik", 14.25F);
+            this.BtnCalculadora.Location = new System.Drawing.Point(383, 551);
+            this.BtnCalculadora.Name = "BtnCalculadora";
+            this.BtnCalculadora.Size = new System.Drawing.Size(350, 40);
+            this.BtnCalculadora.TabIndex = 7;
+            this.BtnCalculadora.Text = "Calculadora";
+            this.BtnCalculadora.UseVisualStyleBackColor = false;
+            this.BtnCalculadora.Click += new System.EventHandler(this.BtnCalculadora_Click);
+            // 
             // Agenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(756, 637);
+            this.ClientSize = new System.Drawing.Size(756, 649);
+            this.Controls.Add(this.BtnCalculadora);
             this.Controls.Add(this.BtnMostrarDados);
             this.Controls.Add(this.LblLink);
             this.Controls.Add(this.Lbl_Copyright);
@@ -395,5 +410,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtID;
         private System.Windows.Forms.Button BtnMostrarDados;
+        private System.Windows.Forms.Button BtnCalculadora;
     }
 }
