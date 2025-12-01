@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,5 +42,15 @@ namespace primeiroprojetoti48
         public int ClienteID { get; set; }
         public string Situacao { get; set; }
         public string Observacao { get; set; }
+    }
+
+    public class Produto
+    {
+        public int ProdutoID { get; set; }
+        public string Nome { get; set; }
+        public string Descricao { get; set; }
+        public string Preco { get; set; }
+        public int Estoque { get; set; }
+        public string Categoria { get; set; }
     }
 }
