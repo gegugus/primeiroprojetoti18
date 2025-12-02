@@ -49,8 +49,10 @@ namespace primeiroprojetoti48
         public int ProdutoID { get; set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }
-        public string Preco { get; set; }
+        public decimal Preco { get; set; }
         public int Estoque { get; set; }
         public string Categoria { get; set; }
+        public DateTime DataRegistro { get; set; }
+        public byte[] Imagem { get; set; }
     }
 }

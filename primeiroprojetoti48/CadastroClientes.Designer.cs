@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LblDadosPessoais = new System.Windows.Forms.Label();
             this.LblNome = new System.Windows.Forms.Label();
             this.TxtNome = new System.Windows.Forms.TextBox();
@@ -99,6 +99,8 @@
             // 
             // TxtNome
             // 
+            this.TxtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtNome.Font = new System.Drawing.Font("Rubik", 12F);
             this.TxtNome.Location = new System.Drawing.Point(26, 75);
@@ -108,6 +110,7 @@
             // 
             // LblCPF
             // 
+            this.LblCPF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblCPF.AutoSize = true;
             this.LblCPF.Font = new System.Drawing.Font("Rubik Medium", 14.25F, System.Drawing.FontStyle.Bold);
             this.LblCPF.Location = new System.Drawing.Point(440, 43);
@@ -118,6 +121,7 @@
             // 
             // TxtCPF
             // 
+            this.TxtCPF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtCPF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtCPF.Font = new System.Drawing.Font("Rubik", 12F);
             this.TxtCPF.Location = new System.Drawing.Point(445, 75);
@@ -128,6 +132,7 @@
             // 
             // LblDataNascimento
             // 
+            this.LblDataNascimento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblDataNascimento.AutoSize = true;
             this.LblDataNascimento.Font = new System.Drawing.Font("Rubik Medium", 14.25F, System.Drawing.FontStyle.Bold);
             this.LblDataNascimento.Location = new System.Drawing.Point(631, 43);
@@ -138,6 +143,7 @@
             // 
             // DTP_DataNascimento
             // 
+            this.DTP_DataNascimento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DTP_DataNascimento.CalendarFont = new System.Drawing.Font("Rubik", 12F);
             this.DTP_DataNascimento.Font = new System.Drawing.Font("Rubik", 12F);
             this.DTP_DataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -193,6 +199,8 @@
             // 
             // LblEmail
             // 
+            this.LblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LblEmail.AutoSize = true;
             this.LblEmail.Font = new System.Drawing.Font("Rubik Medium", 14.25F, System.Drawing.FontStyle.Bold);
             this.LblEmail.Location = new System.Drawing.Point(250, 151);
@@ -203,6 +211,8 @@
             // 
             // TxtEmail
             // 
+            this.TxtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtEmail.Font = new System.Drawing.Font("Rubik", 12F);
             this.TxtEmail.Location = new System.Drawing.Point(255, 183);
@@ -234,6 +244,8 @@
             // 
             // TxtEndereco
             // 
+            this.TxtEndereco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtEndereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtEndereco.Font = new System.Drawing.Font("Rubik", 12F);
             this.TxtEndereco.Location = new System.Drawing.Point(26, 298);
@@ -243,6 +255,7 @@
             // 
             // LblNumero
             // 
+            this.LblNumero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblNumero.AutoSize = true;
             this.LblNumero.Font = new System.Drawing.Font("Rubik Medium", 14.25F, System.Drawing.FontStyle.Bold);
             this.LblNumero.Location = new System.Drawing.Point(450, 266);
@@ -253,6 +266,7 @@
             // 
             // TxtNumero
             // 
+            this.TxtNumero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtNumero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtNumero.Font = new System.Drawing.Font("Rubik", 12F);
             this.TxtNumero.Location = new System.Drawing.Point(454, 298);
@@ -262,6 +276,7 @@
             // 
             // LblBairro
             // 
+            this.LblBairro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblBairro.AutoSize = true;
             this.LblBairro.Font = new System.Drawing.Font("Rubik Medium", 14.25F, System.Drawing.FontStyle.Bold);
             this.LblBairro.Location = new System.Drawing.Point(566, 266);
@@ -272,6 +287,7 @@
             // 
             // TxtBairro
             // 
+            this.TxtBairro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtBairro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtBairro.Font = new System.Drawing.Font("Rubik", 12F);
             this.TxtBairro.Location = new System.Drawing.Point(570, 298);
@@ -291,6 +307,8 @@
             // 
             // TxtCidade
             // 
+            this.TxtCidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtCidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtCidade.Font = new System.Drawing.Font("Rubik", 12F);
             this.TxtCidade.Location = new System.Drawing.Point(26, 370);
@@ -300,6 +318,7 @@
             // 
             // LblEstado
             // 
+            this.LblEstado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblEstado.AutoSize = true;
             this.LblEstado.Font = new System.Drawing.Font("Rubik Medium", 14.25F, System.Drawing.FontStyle.Bold);
             this.LblEstado.Location = new System.Drawing.Point(399, 338);
@@ -310,6 +329,7 @@
             // 
             // TxtEstado
             // 
+            this.TxtEstado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtEstado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtEstado.Font = new System.Drawing.Font("Rubik", 12F);
             this.TxtEstado.Location = new System.Drawing.Point(403, 370);
@@ -319,6 +339,7 @@
             // 
             // LblCEP
             // 
+            this.LblCEP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblCEP.AutoSize = true;
             this.LblCEP.Font = new System.Drawing.Font("Rubik Medium", 14.25F, System.Drawing.FontStyle.Bold);
             this.LblCEP.Location = new System.Drawing.Point(618, 338);
@@ -329,6 +350,7 @@
             // 
             // TxtCEP
             // 
+            this.TxtCEP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtCEP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtCEP.Font = new System.Drawing.Font("Rubik", 12F);
             this.TxtCEP.Location = new System.Drawing.Point(623, 370);
@@ -339,7 +361,7 @@
             // 
             // LblLink
             // 
-            this.LblLink.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LblLink.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LblLink.AutoSize = true;
             this.LblLink.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblLink.Location = new System.Drawing.Point(755, 731);
@@ -352,7 +374,7 @@
             // 
             // Lbl_Copyright
             // 
-            this.Lbl_Copyright.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Lbl_Copyright.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Lbl_Copyright.AutoSize = true;
             this.Lbl_Copyright.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Copyright.Location = new System.Drawing.Point(656, 731);
@@ -363,7 +385,7 @@
             // 
             // Lbl_Rodape
             // 
-            this.Lbl_Rodape.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Lbl_Rodape.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Lbl_Rodape.AutoSize = true;
             this.Lbl_Rodape.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Rodape.Location = new System.Drawing.Point(24, 731);
@@ -386,6 +408,8 @@
             // 
             // LblStatus
             // 
+            this.LblStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LblStatus.AutoSize = true;
             this.LblStatus.Font = new System.Drawing.Font("Rubik Medium", 14.25F, System.Drawing.FontStyle.Bold);
             this.LblStatus.Location = new System.Drawing.Point(21, 453);
@@ -396,6 +420,9 @@
             // 
             // LblObservacao
             // 
+            this.LblObservacao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LblObservacao.AutoSize = true;
             this.LblObservacao.Font = new System.Drawing.Font("Rubik Medium", 14.25F, System.Drawing.FontStyle.Bold);
             this.LblObservacao.Location = new System.Drawing.Point(23, 526);
@@ -406,6 +433,7 @@
             // 
             // BtnPesquisar
             // 
+            this.BtnPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnPesquisar.AutoSize = true;
             this.BtnPesquisar.BackColor = System.Drawing.Color.LightGray;
             this.BtnPesquisar.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -419,6 +447,7 @@
             // 
             // BtnExcluir
             // 
+            this.BtnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnExcluir.AutoSize = true;
             this.BtnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(124)))), ((int)(((byte)(121)))));
             this.BtnExcluir.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -432,6 +461,7 @@
             // 
             // BtnAlterar
             // 
+            this.BtnAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnAlterar.AutoSize = true;
             this.BtnAlterar.BackColor = System.Drawing.Color.LightGray;
             this.BtnAlterar.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -445,6 +475,7 @@
             // 
             // BtnAdicionar
             // 
+            this.BtnAdicionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnAdicionar.AutoSize = true;
             this.BtnAdicionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(189)))), ((int)(((byte)(121)))));
             this.BtnAdicionar.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -458,6 +489,7 @@
             // 
             // BtnMostrarDados
             // 
+            this.BtnMostrarDados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnMostrarDados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(180)))), ((int)(((byte)(214)))));
             this.BtnMostrarDados.Font = new System.Drawing.Font("Rubik", 14.25F);
             this.BtnMostrarDados.Location = new System.Drawing.Point(184, 673);
@@ -470,6 +502,7 @@
             // 
             // LblDataCadastro
             // 
+            this.LblDataCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblDataCadastro.AutoSize = true;
             this.LblDataCadastro.Font = new System.Drawing.Font("Rubik Medium", 14.25F, System.Drawing.FontStyle.Bold);
             this.LblDataCadastro.Location = new System.Drawing.Point(174, 453);
@@ -480,6 +513,7 @@
             // 
             // DTP_DataRegistro
             // 
+            this.DTP_DataRegistro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DTP_DataRegistro.CalendarFont = new System.Drawing.Font("Rubik", 12F);
             this.DTP_DataRegistro.Font = new System.Drawing.Font("Rubik", 12F);
             this.DTP_DataRegistro.Location = new System.Drawing.Point(179, 485);
@@ -489,14 +523,16 @@
             // 
             // DTG_View
             // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Rubik", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DTG_View.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.DTG_View.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Rubik", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DTG_View.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DTG_View.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DTG_View.Location = new System.Drawing.Point(425, 558);
             this.DTG_View.Name = "DTG_View";
@@ -506,6 +542,9 @@
             // 
             // TxtObservacao
             // 
+            this.TxtObservacao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtObservacao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtObservacao.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtObservacao.Location = new System.Drawing.Point(28, 558);
@@ -516,6 +555,8 @@
             // 
             // LblCadastrados
             // 
+            this.LblCadastrados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LblCadastrados.AutoSize = true;
             this.LblCadastrados.Font = new System.Drawing.Font("Rubik Medium", 14.25F, System.Drawing.FontStyle.Bold);
             this.LblCadastrados.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -527,6 +568,8 @@
             // 
             // TxtSituacao
             // 
+            this.TxtSituacao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtSituacao.Font = new System.Drawing.Font("Rubik", 8.5F);
             this.TxtSituacao.FormattingEnabled = true;
             this.TxtSituacao.Items.AddRange(new object[] {
@@ -588,7 +631,7 @@
             this.Controls.Add(this.LblContato);
             this.Controls.Add(this.LblDadosPessoais);
             this.Name = "CadastroClientes";
-            this.Text = "Cadastro Clientes";
+            this.Text = "Cadastro de Clientes";
             this.Load += new System.EventHandler(this.CadastroClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DTG_View)).EndInit();
             this.ResumeLayout(false);

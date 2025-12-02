@@ -28,6 +28,25 @@ namespace primeiroprojetoti48
         private void CadastroClientes_Load(object sender, EventArgs e)
         {
             TxtNome.Focus();
+            CarregarGrid();
+        }
+        private void CarregarGrid()
+        {
+            using (var conn = ConnBD.GetConnection())
+            {
+                conn.Open();
+
+                string sql = @"SELECT ClienteID, Nome, CPF
+                FROM CLIENTES
+                ORDER BY Nome DESC
+                ";
+
+                SqlDataAdapter da = new SqlDataAdapter(sql, conn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                DTG_View.DataSource = dt;
+            }
         }
 
         private void LblLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -262,6 +281,7 @@ namespace primeiroprojetoti48
 
             MessageBox.Show("Registro alterado com sucesso!");
             LimparCampos();
+            CarregarGrid();
         }
 
 
@@ -438,6 +458,7 @@ namespace primeiroprojetoti48
 
                 MessageBox.Show("Registro excluído com sucesso!");
                 LimparCampos();
+                CarregarGrid();
             }
             catch (Exception ex)
             {
