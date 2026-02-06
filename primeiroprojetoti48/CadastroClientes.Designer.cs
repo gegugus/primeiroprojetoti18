@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroClientes));
             this.LblDadosPessoais = new System.Windows.Forms.Label();
             this.LblNome = new System.Windows.Forms.Label();
             this.TxtNome = new System.Windows.Forms.TextBox();
@@ -390,9 +391,9 @@
             this.Lbl_Rodape.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Rodape.Location = new System.Drawing.Point(24, 731);
             this.Lbl_Rodape.Name = "Lbl_Rodape";
-            this.Lbl_Rodape.Size = new System.Drawing.Size(133, 17);
+            this.Lbl_Rodape.Size = new System.Drawing.Size(131, 17);
             this.Lbl_Rodape.TabIndex = 0;
-            this.Lbl_Rodape.Text = "Cadastro de Cliente v1.0";
+            this.Lbl_Rodape.Text = "Sistema de Vendas v1.0";
             // 
             // LblStatusdocadastro
             // 
@@ -630,6 +631,7 @@
             this.Controls.Add(this.LblEndereco);
             this.Controls.Add(this.LblContato);
             this.Controls.Add(this.LblDadosPessoais);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CadastroClientes";
             this.Text = "Cadastro de Clientes";
             this.Load += new System.EventHandler(this.CadastroClientes_Load);

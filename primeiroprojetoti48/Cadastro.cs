@@ -55,4 +55,22 @@ namespace primeiroprojetoti48
         public DateTime DataRegistro { get; set; }
         public byte[] Imagem { get; set; }
     }
+
+    public class Venda
+    {
+        public int VendaID { get; set; }
+        public int ClienteID { get; set; }
+        public DateTime DataVenda { get; set; }
+        public decimal ValorTotal { get; set; }
+        public decimal Desconto { get; set; }
+    }
+
+    public class ItemCarrinho
+    {
+        public int ProdutoID { get; set; }
+        public string Nome { get; set; }
+        public int Quantidade { get; set; }
+        public decimal PrecoUnitario { get; set; }
+        public decimal Subtotal => Quantidade * PrecoUnitario;
+    }
 }

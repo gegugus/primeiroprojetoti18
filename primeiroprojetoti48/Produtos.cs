@@ -35,7 +35,6 @@ namespace primeiroprojetoti48
         private byte[] ImageToByte(Image img)
         {
             if (img == null) return null;
-
             using (MemoryStream ms = new MemoryStream())
             {
                 img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
@@ -45,8 +44,7 @@ namespace primeiroprojetoti48
 
         private Image ByteToImage(byte[] bytes)
         {
-            if (bytes == null) return null;
-
+            if (bytes == null || bytes.Length == 0) return null;
             using (MemoryStream ms = new MemoryStream(bytes))
             {
                 return Image.FromStream(ms);
@@ -58,17 +56,18 @@ namespace primeiroprojetoti48
             using (var conn = ConnBD.GetConnection())
             {
                 conn.Open();
-
-                string sql = @"SELECT ProdutoID, Nome, Descricao, Preco, Estoque, Categoria, DataRegistro
-                FROM PRODUTOS
-                ORDER BY ProdutoID DESC
-                ";
+                string sql = @"SELECT ProdutoID, Nome, Descricao, Preco, Estoque, Categoria, Imagem, DataRegistro
+                               FROM PRODUTOS
+                               ORDER BY ProdutoID DESC";
 
                 SqlDataAdapter da = new SqlDataAdapter(sql, conn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
                 DTG_View.DataSource = dt;
+
+                if (DTG_View.Columns.Contains("Imagem"))
+                    DTG_View.Columns["Imagem"].Visible = false;
             }
         }
 
@@ -87,8 +86,34 @@ namespace primeiroprojetoti48
                 PictureBox.Image.Dispose();
                 PictureBox.Image = null;
             }
-
             TxtNome.Focus();
+        }
+
+        private void DTG_View_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = DTG_View.Rows[e.RowIndex];
+
+                TxtID.Text = row.Cells["ProdutoID"].Value.ToString();
+                TxtNome.Text = row.Cells["Nome"].Value.ToString();
+                TxtDescricao.Text = row.Cells["Descricao"].Value.ToString();
+                TxtPreco.Text = row.Cells["Preco"].Value.ToString();
+                TxtEstoque.Text = row.Cells["Estoque"].Value.ToString();
+                TxtCategoria.Text = row.Cells["Categoria"].Value.ToString();
+                DTP_DataRegistro.Value = Convert.ToDateTime(row.Cells["DataRegistro"].Value);
+
+                if (row.Cells["Imagem"].Value != DBNull.Value && row.Cells["Imagem"].Value != null)
+                {
+                    byte[] imgData = (byte[])row.Cells["Imagem"].Value;
+                    PictureBox.Image = ByteToImage(imgData);
+                    PictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+                }
+                else
+                {
+                    PictureBox.Image = null;
+                }
+            }
         }
 
         private void LblImgInserir_Click(object sender, EventArgs e)
@@ -101,7 +126,6 @@ namespace primeiroprojetoti48
                 if (PictureBox.Image != null)
                 {
                     PictureBox.Image.Dispose();
-                    PictureBox.Image = null;
                 }
 
                 using (var temp = new Bitmap(ofd.FileName))
@@ -127,23 +151,11 @@ namespace primeiroprojetoti48
 
         private void BtnAdicionar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(TxtNome.Text))
-            {
-                MessageBox.Show("Informe o nome do produto!");
-                return;
-            }
+            if (string.IsNullOrWhiteSpace(TxtNome.Text)) return;
 
-            if (!decimal.TryParse(TxtPreco.Text, out decimal preco))
+            if (!decimal.TryParse(TxtPreco.Text, out decimal preco) || !int.TryParse(TxtEstoque.Text, out int estoque))
             {
-                MessageBox.Show("Preço inválido!");
-                TxtPreco.Focus();
-                return;
-            }
-
-            if (!int.TryParse(TxtEstoque.Text, out int estoque))
-            {
-                MessageBox.Show("Estoque inválido!");
-                TxtEstoque.Focus();
+                MessageBox.Show("Verifique preço e estoque.");
                 return;
             }
 
@@ -152,14 +164,10 @@ namespace primeiroprojetoti48
                 using (var conn = ConnBD.GetConnection())
                 {
                     conn.Open();
-
-                    string sql = @"INSERT INTO PRODUTOS
-                           (Nome, Descricao, Preco, Estoque, Categoria, Imagem, DataRegistro)
-                           VALUES
-                           (@Nome, @Descricao, @Preco, @Estoque, @Categoria, @Imagem, @DataRegistro)";
+                    string sql = @"INSERT INTO PRODUTOS (Nome, Descricao, Preco, Estoque, Categoria, Imagem, DataRegistro)
+                                   VALUES (@Nome, @Descricao, @Preco, @Estoque, @Categoria, @Imagem, @DataRegistro)";
 
                     SqlCommand cmd = new SqlCommand(sql, conn);
-
                     cmd.Parameters.AddWithValue("@Nome", TxtNome.Text.ToUpper());
                     cmd.Parameters.AddWithValue("@Descricao", TxtDescricao.Text.ToUpper());
                     cmd.Parameters.AddWithValue("@Preco", preco);
@@ -172,57 +180,30 @@ namespace primeiroprojetoti48
 
                     cmd.ExecuteNonQuery();
                 }
-
-                MessageBox.Show("Produto cadastrado com sucesso!");
+                MessageBox.Show("Sucesso!");
                 LimparCampos();
                 CarregarGrid();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao adicionar produto: " + ex.Message);
-            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void BtnAlterar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(TxtID.Text))
-            {
-                MessageBox.Show("Selecione um produto para alterar!");
-                return;
-            }
+            if (string.IsNullOrWhiteSpace(TxtID.Text)) return;
 
-            if (!decimal.TryParse(TxtPreco.Text, out decimal preco))
-            {
-                MessageBox.Show("Preço inválido!");
-                TxtPreco.Focus();
-                return;
-            }
-
-            if (!int.TryParse(TxtEstoque.Text, out int estoque))
-            {
-                MessageBox.Show("Estoque inválido!");
-                TxtEstoque.Focus();
-                return;
-            }
+            decimal.TryParse(TxtPreco.Text, out decimal preco);
+            int.TryParse(TxtEstoque.Text, out int estoque);
 
             try
             {
                 using (var conn = ConnBD.GetConnection())
                 {
                     conn.Open();
-
-                    string sql = @"UPDATE PRODUTOS 
-                           SET Nome=@Nome,
-                               Descricao=@Descricao,
-                               Preco=@Preco,
-                               Estoque=@Estoque,
-                               Categoria=@Categoria,
-                               Imagem=@Imagem,
-                               DataRegistro=@DataRegistro
-                           WHERE ProdutoID=@ID";
+                    string sql = @"UPDATE PRODUTOS SET Nome=@Nome, Descricao=@Descricao, Preco=@Preco, 
+                                   Estoque=@Estoque, Categoria=@Categoria, Imagem=@Imagem, DataRegistro=@DataRegistro
+                                   WHERE ProdutoID=@ID";
 
                     SqlCommand cmd = new SqlCommand(sql, conn);
-
                     cmd.Parameters.AddWithValue("@ID", int.Parse(TxtID.Text));
                     cmd.Parameters.AddWithValue("@Nome", TxtNome.Text.ToUpper());
                     cmd.Parameters.AddWithValue("@Descricao", TxtDescricao.Text.ToUpper());
@@ -231,116 +212,50 @@ namespace primeiroprojetoti48
                     cmd.Parameters.AddWithValue("@Categoria", TxtCategoria.Text);
                     cmd.Parameters.AddWithValue("@DataRegistro", DTP_DataRegistro.Value);
 
-                    byte[] img = null;
-                    if (PictureBox.Image != null)
-                    {
-                        using (var temp = new Bitmap(PictureBox.Image))
-                        {
-                            img = ImageToByte(temp);
-                        }
-                    }
-
+                    byte[] img = ImageToByte(PictureBox.Image);
                     cmd.Parameters.Add("@Imagem", SqlDbType.VarBinary).Value = (object)img ?? DBNull.Value;
 
                     cmd.ExecuteNonQuery();
                 }
-
-                MessageBox.Show("Produto alterado com sucesso!");
+                MessageBox.Show("Alterado!");
                 CarregarGrid();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao alterar produto: " + ex.Message);
-            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void BtnExcluir_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(TxtID.Text))
-            {
-                MessageBox.Show("Selecione um produto para excluir!");
-                return;
-            }
-
-            DialogResult r = MessageBox.Show(
-                "Confirma a exclusão?",
-                "Excluir Produto",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning);
-
-            if (r == DialogResult.No) return;
+            if (string.IsNullOrWhiteSpace(TxtID.Text)) return;
+            if (MessageBox.Show("Excluir?", "Confirma", MessageBoxButtons.YesNo) == DialogResult.No) return;
 
             try
             {
                 using (var conn = ConnBD.GetConnection())
                 {
                     conn.Open();
-
                     string sql = "DELETE FROM PRODUTOS WHERE ProdutoID=@ID";
                     SqlCommand cmd = new SqlCommand(sql, conn);
-                    cmd.Parameters.AddWithValue("@ID", int.Parse(TxtID.Text));
+                    cmd.Parameters.AddWithValue("@ID", TxtID.Text);
                     cmd.ExecuteNonQuery();
                 }
-
-                MessageBox.Show("Produto excluído com sucesso!");
                 LimparCampos();
                 CarregarGrid();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao excluir produto: " + ex.Message);
-            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void BtnPesquisar_Click(object sender, EventArgs e)
         {
-            string pesquisa = TxtNome.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(pesquisa))
-            {
-                MessageBox.Show("Digite um nome para pesquisar!");
-                return;
-            }
-
             using (var conn = ConnBD.GetConnection())
             {
                 conn.Open();
-
-                string sql = @"SELECT ProdutoID, Nome, Descricao, Preco, Estoque, Categoria, Imagem, DataRegistro
-                FROM PRODUTOS
-                WHERE Nome LIKE @Nome
-                ";
-
+                string sql = "SELECT * FROM PRODUTOS WHERE Nome LIKE @Nome";
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@Nome", "%" + pesquisa + "%");
-
+                cmd.Parameters.AddWithValue("@Nome", "%" + TxtNome.Text + "%");
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-
                 DTG_View.DataSource = dt;
-
-                if (dt.Rows.Count > 0)
-                {
-                    DataRow dr = dt.Rows[0];
-
-                    TxtID.Text = dr["ProdutoID"].ToString();
-                    TxtNome.Text = dr["Nome"].ToString();
-                    TxtDescricao.Text = dr["Descricao"].ToString();
-                    TxtPreco.Text = dr["Preco"].ToString();
-                    TxtEstoque.Text = dr["Estoque"].ToString();
-                    TxtCategoria.Text = dr["Categoria"].ToString();
-                    DTP_DataRegistro.Value = Convert.ToDateTime(dr["DataRegistro"]);
-
-                    if (dr["Imagem"] != DBNull.Value)
-                        PictureBox.Image = ByteToImage((byte[])dr["Imagem"]);
-                    else
-                        PictureBox.Image = null;
-                }
-                else
-                {
-                    MessageBox.Show("Nenhum produto encontrado!");
-                }
             }
         }
 

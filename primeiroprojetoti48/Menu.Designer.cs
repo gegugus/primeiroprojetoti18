@@ -39,7 +39,6 @@
             this.vendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.todasAsTabelasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BtnSair = new System.Windows.Forms.ToolStripMenuItem();
             this.LblLink = new System.Windows.Forms.LinkLabel();
             this.Lbl_Copyright = new System.Windows.Forms.Label();
@@ -49,44 +48,66 @@
             // 
             // BtnVendas
             // 
-            this.BtnVendas.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.BtnVendas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnVendas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(35)))));
+            this.BtnVendas.Font = new System.Drawing.Font("Rubik", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnVendas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
             this.BtnVendas.Location = new System.Drawing.Point(12, 34);
             this.BtnVendas.Name = "BtnVendas";
-            this.BtnVendas.Size = new System.Drawing.Size(330, 330);
-            this.BtnVendas.TabIndex = 0;
+            this.BtnVendas.Size = new System.Drawing.Size(920, 75);
+            this.BtnVendas.TabIndex = 1;
             this.BtnVendas.Text = "VENDAS";
+            this.BtnVendas.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.BtnVendas.UseVisualStyleBackColor = false;
+            this.BtnVendas.Click += new System.EventHandler(this.BtnVendas_Click);
             // 
             // BtnClientes
             // 
-            this.BtnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(160)))), ((int)(((byte)(102)))));
-            this.BtnClientes.Image = ((System.Drawing.Image)(resources.GetObject("BtnClientes.Image")));
-            this.BtnClientes.Location = new System.Drawing.Point(357, 34);
+            this.BtnClientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(153)))), ((int)(((byte)(88)))));
+            this.BtnClientes.Font = new System.Drawing.Font("Rubik", 24F, System.Drawing.FontStyle.Bold);
+            this.BtnClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.BtnClientes.Location = new System.Drawing.Point(12, 115);
             this.BtnClientes.Name = "BtnClientes";
-            this.BtnClientes.Size = new System.Drawing.Size(200, 160);
-            this.BtnClientes.TabIndex = 0;
+            this.BtnClientes.Size = new System.Drawing.Size(920, 75);
+            this.BtnClientes.TabIndex = 2;
+            this.BtnClientes.Text = "CLIENTES";
+            this.BtnClientes.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.BtnClientes.UseVisualStyleBackColor = false;
             this.BtnClientes.Click += new System.EventHandler(this.BtnClientes_Click);
             // 
             // BtnProdutos
             // 
-            this.BtnProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(87)))), ((int)(((byte)(59)))));
-            this.BtnProdutos.Location = new System.Drawing.Point(357, 204);
+            this.BtnProdutos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(86)))), ((int)(((byte)(102)))));
+            this.BtnProdutos.Font = new System.Drawing.Font("Rubik", 24F, System.Drawing.FontStyle.Bold);
+            this.BtnProdutos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(150)))), ((int)(((byte)(140)))));
+            this.BtnProdutos.Location = new System.Drawing.Point(12, 196);
             this.BtnProdutos.Name = "BtnProdutos";
-            this.BtnProdutos.Size = new System.Drawing.Size(415, 160);
-            this.BtnProdutos.TabIndex = 0;
+            this.BtnProdutos.Size = new System.Drawing.Size(920, 75);
+            this.BtnProdutos.TabIndex = 3;
             this.BtnProdutos.Text = "PRODUTOS";
+            this.BtnProdutos.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.BtnProdutos.UseVisualStyleBackColor = false;
             this.BtnProdutos.Click += new System.EventHandler(this.BtnProdutos_Click);
             // 
             // BtnCalculadora
             // 
-            this.BtnCalculadora.Image = ((System.Drawing.Image)(resources.GetObject("BtnCalculadora.Image")));
-            this.BtnCalculadora.Location = new System.Drawing.Point(572, 34);
+            this.BtnCalculadora.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnCalculadora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(150)))), ((int)(((byte)(140)))));
+            this.BtnCalculadora.Font = new System.Drawing.Font("Rubik", 24F, System.Drawing.FontStyle.Bold);
+            this.BtnCalculadora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(213)))));
+            this.BtnCalculadora.Location = new System.Drawing.Point(12, 277);
             this.BtnCalculadora.Name = "BtnCalculadora";
-            this.BtnCalculadora.Size = new System.Drawing.Size(200, 160);
-            this.BtnCalculadora.TabIndex = 0;
-            this.BtnCalculadora.UseVisualStyleBackColor = true;
+            this.BtnCalculadora.Size = new System.Drawing.Size(920, 75);
+            this.BtnCalculadora.TabIndex = 3;
+            this.BtnCalculadora.Text = "CALCULADORA";
+            this.BtnCalculadora.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.BtnCalculadora.UseVisualStyleBackColor = false;
             this.BtnCalculadora.Click += new System.EventHandler(this.BtnCalculadora_Click);
             // 
             // MenuStrip
@@ -98,7 +119,7 @@
             this.BtnSair});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Size = new System.Drawing.Size(784, 27);
+            this.MenuStrip.Size = new System.Drawing.Size(949, 27);
             this.MenuStrip.TabIndex = 1;
             this.MenuStrip.Text = "menuStrip1";
             // 
@@ -115,35 +136,31 @@
             this.tabelasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.vendasToolStripMenuItem,
             this.clientesToolStripMenuItem,
-            this.produtosToolStripMenuItem,
-            this.todasAsTabelasToolStripMenuItem});
+            this.produtosToolStripMenuItem});
             this.tabelasToolStripMenuItem.Name = "tabelasToolStripMenuItem";
-            this.tabelasToolStripMenuItem.Size = new System.Drawing.Size(121, 24);
+            this.tabelasToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.tabelasToolStripMenuItem.Text = "Tabelas";
             // 
             // vendasToolStripMenuItem
             // 
             this.vendasToolStripMenuItem.Name = "vendasToolStripMenuItem";
-            this.vendasToolStripMenuItem.Size = new System.Drawing.Size(173, 24);
+            this.vendasToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.vendasToolStripMenuItem.Text = "Vendas";
+            this.vendasToolStripMenuItem.Click += new System.EventHandler(this.vendasToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(173, 24);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.clientesToolStripMenuItem.Text = "Clientes";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // produtosToolStripMenuItem
             // 
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(173, 24);
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.produtosToolStripMenuItem.Text = "Produtos";
-            // 
-            // todasAsTabelasToolStripMenuItem
-            // 
-            this.todasAsTabelasToolStripMenuItem.Name = "todasAsTabelasToolStripMenuItem";
-            this.todasAsTabelasToolStripMenuItem.Size = new System.Drawing.Size(173, 24);
-            this.todasAsTabelasToolStripMenuItem.Text = "Todas as Tabelas";
+            this.produtosToolStripMenuItem.Click += new System.EventHandler(this.produtosToolStripMenuItem_Click);
             // 
             // BtnSair
             // 
@@ -154,9 +171,10 @@
             // 
             // LblLink
             // 
+            this.LblLink.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LblLink.AutoSize = true;
             this.LblLink.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLink.Location = new System.Drawing.Point(728, 383);
+            this.LblLink.Location = new System.Drawing.Point(890, 368);
             this.LblLink.Name = "LblLink";
             this.LblLink.Size = new System.Drawing.Size(44, 17);
             this.LblLink.TabIndex = 22;
@@ -165,9 +183,10 @@
             // 
             // Lbl_Copyright
             // 
+            this.Lbl_Copyright.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Lbl_Copyright.AutoSize = true;
             this.Lbl_Copyright.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Copyright.Location = new System.Drawing.Point(629, 383);
+            this.Lbl_Copyright.Location = new System.Drawing.Point(791, 368);
             this.Lbl_Copyright.Name = "Lbl_Copyright";
             this.Lbl_Copyright.Size = new System.Drawing.Size(96, 17);
             this.Lbl_Copyright.TabIndex = 20;
@@ -175,9 +194,10 @@
             // 
             // Lbl_Rodape
             // 
+            this.Lbl_Rodape.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Lbl_Rodape.AutoSize = true;
             this.Lbl_Rodape.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Rodape.Location = new System.Drawing.Point(12, 383);
+            this.Lbl_Rodape.Location = new System.Drawing.Point(12, 368);
             this.Lbl_Rodape.Name = "Lbl_Rodape";
             this.Lbl_Rodape.Size = new System.Drawing.Size(131, 17);
             this.Lbl_Rodape.TabIndex = 21;
@@ -187,7 +207,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 408);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(949, 395);
             this.Controls.Add(this.LblLink);
             this.Controls.Add(this.Lbl_Copyright);
             this.Controls.Add(this.Lbl_Rodape);
@@ -196,6 +217,7 @@
             this.Controls.Add(this.BtnClientes);
             this.Controls.Add(this.BtnVendas);
             this.Controls.Add(this.MenuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.MenuStrip;
             this.Name = "Menu";
             this.Text = "Sistema de Vendas";
@@ -219,7 +241,6 @@
         private System.Windows.Forms.ToolStripMenuItem vendasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem todasAsTabelasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem BtnSair;
         private System.Windows.Forms.LinkLabel LblLink;
         private System.Windows.Forms.Label Lbl_Copyright;

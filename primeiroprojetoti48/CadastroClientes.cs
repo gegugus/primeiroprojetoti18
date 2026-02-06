@@ -35,17 +35,31 @@ namespace primeiroprojetoti48
             using (var conn = ConnBD.GetConnection())
             {
                 conn.Open();
-
-                string sql = @"SELECT ClienteID, Nome, CPF
-                FROM CLIENTES
-                ORDER BY Nome DESC
-                ";
+                string sql = @"
+            SELECT 
+                C.ClienteID, C.Nome, C.CPF, C.DataNasct, C.DataRegistro, 
+                T.Telefone, T.Email, 
+                E.Logradouro, E.Numero, E.Bairro, E.Cidade, E.Estado, E.Cep,
+                O.Situacao, O.Observacao
+            FROM CLIENTES C
+            LEFT JOIN CONTATOS T ON C.ClienteID = T.ClienteID
+            LEFT JOIN ENDERECO E ON C.ClienteID = E.ClienteID
+            LEFT JOIN OBSERVACOES O ON C.ClienteID = O.ClienteID
+            ORDER BY C.Nome ASC";
 
                 SqlDataAdapter da = new SqlDataAdapter(sql, conn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
                 DTG_View.DataSource = dt;
+
+                foreach (DataGridViewColumn col in DTG_View.Columns)
+                {
+                    if (col.Name != "ClienteID" && col.Name != "Nome" && col.Name != "CPF")
+                    {
+                        col.Visible = false;
+                    }
+                }
             }
         }
 
@@ -86,7 +100,9 @@ namespace primeiroprojetoti48
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(TxtCPF.Text))
+            string cpfLimpo = Regex.Replace(TxtCPF.Text, @"[^\d]", "");
+
+            if (cpfLimpo.Length < 11)
             {
                 MessageBox.Show("CPF inválido!");
                 return;
@@ -99,16 +115,14 @@ namespace primeiroprojetoti48
                 using (var conn = ConnBD.GetConnection())
                 {
                     conn.Open();
-
                     string sqlCliente = @"
                 INSERT INTO CLIENTES (Nome, CPF, DataNasct, DataRegistro)
                 VALUES (@Nome, @CPF, @DataNascimento, @DataRegistro);
                 SELECT SCOPE_IDENTITY();";
 
                     SqlCommand cmd = new SqlCommand(sqlCliente, conn);
-
                     cmd.Parameters.AddWithValue("@Nome", TxtNome.Text.ToUpper());
-                    cmd.Parameters.AddWithValue("@CPF", TxtCPF.Text);
+                    cmd.Parameters.AddWithValue("@CPF", cpfLimpo);
                     cmd.Parameters.AddWithValue("@DataNascimento", DTP_DataNascimento.Value);
                     cmd.Parameters.AddWithValue("@DataRegistro", DTP_DataRegistro.Value);
 
@@ -118,31 +132,19 @@ namespace primeiroprojetoti48
                 using (var conn = ConnBD.GetConnection())
                 {
                     conn.Open();
-
-                    string sql = @"
-                INSERT INTO CONTATOS (ClienteID, Telefone, Email)
-                VALUES (@ClienteID, @Telefone, @Email)";
-
+                    string sql = "INSERT INTO CONTATOS (ClienteID, Telefone, Email) VALUES (@ClienteID, @Telefone, @Email)";
                     SqlCommand cmd = new SqlCommand(sql, conn);
-
                     cmd.Parameters.AddWithValue("@ClienteID", novoClienteID);
                     cmd.Parameters.AddWithValue("@Telefone", TxtTelefone.Text);
                     cmd.Parameters.AddWithValue("@Email", TxtEmail.Text.ToLower());
-
                     cmd.ExecuteNonQuery();
                 }
 
                 using (var conn = ConnBD.GetConnection())
                 {
                     conn.Open();
-
-                    string sql = @"
-                INSERT INTO ENDERECO 
-                (ClienteID, Logradouro, Numero, Bairro, Cidade, Estado, Cep)
-                VALUES (@ClienteID, @Logradouro, @Numero, @Bairro, @Cidade, @Estado, @Cep)";
-
+                    string sql = "INSERT INTO ENDERECO (ClienteID, Logradouro, Numero, Bairro, Cidade, Estado, Cep) VALUES (@ClienteID, @Logradouro, @Numero, @Bairro, @Cidade, @Estado, @Cep)";
                     SqlCommand cmd = new SqlCommand(sql, conn);
-
                     cmd.Parameters.AddWithValue("@ClienteID", novoClienteID);
                     cmd.Parameters.AddWithValue("@Logradouro", TxtEndereco.Text.ToUpper());
                     cmd.Parameters.AddWithValue("@Numero", TxtNumero.Text);
@@ -150,29 +152,23 @@ namespace primeiroprojetoti48
                     cmd.Parameters.AddWithValue("@Cidade", TxtCidade.Text.ToUpper());
                     cmd.Parameters.AddWithValue("@Estado", TxtEstado.Text.ToUpper());
                     cmd.Parameters.AddWithValue("@Cep", TxtCEP.Text);
-
                     cmd.ExecuteNonQuery();
                 }
 
                 using (var conn = ConnBD.GetConnection())
                 {
                     conn.Open();
-
-                    string sql = @"
-                INSERT INTO OBSERVACOES (ClienteID, Situacao, Observacao)
-                VALUES (@ClienteID, @Situacao, @Observacao)";
-
+                    string sql = "INSERT INTO OBSERVACOES (ClienteID, Situacao, Observacao) VALUES (@ClienteID, @Situacao, @Observacao)";
                     SqlCommand cmd = new SqlCommand(sql, conn);
-
                     cmd.Parameters.AddWithValue("@ClienteID", novoClienteID);
                     cmd.Parameters.AddWithValue("@Situacao", TxtSituacao.Text.ToUpper());
                     cmd.Parameters.AddWithValue("@Observacao", TxtObservacao.Text.ToUpper());
-
                     cmd.ExecuteNonQuery();
                 }
 
                 MessageBox.Show("Registro inserido com sucesso!");
                 LimparCampos();
+                CarregarGrid();
             }
             catch (Exception ex)
             {
@@ -363,12 +359,10 @@ namespace primeiroprojetoti48
             {
                 DataGridViewRow row = DTG_View.Rows[e.RowIndex];
 
-                // Preencher os campos do formulário
                 TxtID.Text = row.Cells["ClienteID"].Value.ToString();
                 TxtNome.Text = row.Cells["Nome"].Value.ToString();
                 TxtCPF.Text = row.Cells["CPF"].Value.ToString();
 
-                // Recuperar todas as informações do DataTable
                 DataTable dt = DTG_View.DataSource as DataTable;
                 if (dt != null)
                 {

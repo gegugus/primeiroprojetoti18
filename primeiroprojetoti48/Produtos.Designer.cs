@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Produtos));
             this.LblNome = new System.Windows.Forms.Label();
             this.TxtNome = new System.Windows.Forms.TextBox();
             this.LblImagem = new System.Windows.Forms.Label();
@@ -271,6 +272,7 @@
             this.DTG_View.Size = new System.Drawing.Size(821, 100);
             this.DTG_View.TabIndex = 0;
             this.DTG_View.TabStop = false;
+            this.DTG_View.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DTG_View_CellClick);
             this.DTG_View.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DTG_View_CellContentClick);
             // 
             // LblCadastrados
@@ -385,9 +387,9 @@
             this.Lbl_Rodape.Font = new System.Drawing.Font("Rubik", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Rodape.Location = new System.Drawing.Point(14, 678);
             this.Lbl_Rodape.Name = "Lbl_Rodape";
-            this.Lbl_Rodape.Size = new System.Drawing.Size(144, 17);
+            this.Lbl_Rodape.Size = new System.Drawing.Size(131, 17);
             this.Lbl_Rodape.TabIndex = 25;
-            this.Lbl_Rodape.Text = "Cadastro de Produtos v1.0";
+            this.Lbl_Rodape.Text = "Sistema de Vendas v1.0";
             // 
             // TxtID
             // 
@@ -446,6 +448,7 @@
             this.Controls.Add(this.LblPreco);
             this.Controls.Add(this.LblEstoque);
             this.Controls.Add(this.LblNome);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Produtos";
             this.Text = "Cadastro de Produtos";
             this.Load += new System.EventHandler(this.Produtos_Load);
