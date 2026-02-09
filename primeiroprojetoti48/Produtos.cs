@@ -180,7 +180,7 @@ namespace primeiroprojetoti48
 
                     cmd.ExecuteNonQuery();
                 }
-                MessageBox.Show("Sucesso!");
+                MessageBox.Show("Produto cadastrado com sucesso!");
                 LimparCampos();
                 CarregarGrid();
             }
@@ -217,7 +217,7 @@ namespace primeiroprojetoti48
 
                     cmd.ExecuteNonQuery();
                 }
-                MessageBox.Show("Alterado!");
+                MessageBox.Show("Registro alterado com sucesso!");
                 CarregarGrid();
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
@@ -226,7 +226,7 @@ namespace primeiroprojetoti48
         private void BtnExcluir_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(TxtID.Text)) return;
-            if (MessageBox.Show("Excluir?", "Confirma", MessageBoxButtons.YesNo) == DialogResult.No) return;
+            if (MessageBox.Show("Deseja excluir este registro?", "Confirma", MessageBoxButtons.YesNo) == DialogResult.No) return;
 
             try
             {

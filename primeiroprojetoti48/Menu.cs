@@ -84,5 +84,11 @@ namespace primeiroprojetoti48
             TB_Produtos tela = new TB_Produtos();
             tela.Show();
         }
+
+        private void auditoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TB_Auditoria tela = new TB_Auditoria();
+            tela.Show();
+        }
     }
 }

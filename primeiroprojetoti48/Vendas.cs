@@ -210,7 +210,7 @@ namespace primeiroprojetoti48
         {
             if (DTG_View.CurrentRow != null)
             {
-                DialogResult result = MessageBox.Show("Deseja alterar este produto? Ele retornará para os campos de edição.", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show("Deseja alterar este produto?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result == DialogResult.Yes)
                 {

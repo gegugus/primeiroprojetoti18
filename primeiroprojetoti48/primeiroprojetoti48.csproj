@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TB_Auditoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB_Auditoria.Designer.cs">
+      <DependentUpon>TB_Auditoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cadastro.cs" />
     <Compile Include="CadastroClientes.cs">
       <SubType>Form</SubType>
@@ -106,6 +112,9 @@
     <Compile Include="Vendas.Designer.cs">
       <DependentUpon>Vendas.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TB_Auditoria.resx">
+      <DependentUpon>TB_Auditoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CadastroClientes.resx">
       <DependentUpon>CadastroClientes.cs</DependentUpon>
     </EmbeddedResource>

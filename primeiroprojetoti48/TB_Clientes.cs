@@ -39,21 +39,21 @@ namespace primeiroprojetoti48
                 {
                     string query = @"
                         SELECT 
-                            C.ClienteID,
-                            C.Nome AS NomeCliente,
+                            C.ClienteID AS 'CLIENTE ID',
+                            C.Nome AS 'NOME CLIENTE',
                             C.CPF,
-                            C.DataNasct,
-                            CT.Telefone,
-                            CT.Email,
-                            E.Logradouro,
-                            E.Numero,        
-                            E.Bairro,
-                            E.Cidade,    
-                            E.Estado,
-                            E.Cep,
-                            O.Situacao,
-                            O.Observacao,
-                            C.DataRegistro
+                            C.DataNasct AS 'DATA NASCIMENTO',
+                            CT.Telefone AS TELEFONE,
+                            CT.Email AS EMAIL,
+                            E.Logradouro AS LOGRADOURO,
+                            E.Numero AS NÚMERO,        
+                            E.Bairro AS BAIRRO,
+                            E.Cidade AS CIDADE,    
+                            E.Estado AS ESTADO,
+                            E.Cep AS CEP,
+                            O.Situacao AS SITUAÇÃO,
+                            O.Observacao AS OBSERVAÇÃO,
+                            C.DataRegistro AS 'DATA REGISTRO'
                         FROM CLIENTES C
                         LEFT JOIN CONTATOS CT ON C.ClienteID = CT.ClienteID
                         LEFT JOIN ENDERECO E ON C.ClienteID = E.ClienteID

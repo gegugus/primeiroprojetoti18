@@ -43,6 +43,7 @@
             this.LblLink = new System.Windows.Forms.LinkLabel();
             this.Lbl_Copyright = new System.Windows.Forms.Label();
             this.Lbl_Rodape = new System.Windows.Forms.Label();
+            this.auditoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -136,7 +137,8 @@
             this.tabelasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.vendasToolStripMenuItem,
             this.clientesToolStripMenuItem,
-            this.produtosToolStripMenuItem});
+            this.produtosToolStripMenuItem,
+            this.auditoriaToolStripMenuItem});
             this.tabelasToolStripMenuItem.Name = "tabelasToolStripMenuItem";
             this.tabelasToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.tabelasToolStripMenuItem.Text = "Tabelas";
@@ -203,6 +205,13 @@
             this.Lbl_Rodape.TabIndex = 21;
             this.Lbl_Rodape.Text = "Sistema de Vendas v1.0";
             // 
+            // auditoriaToolStripMenuItem
+            // 
+            this.auditoriaToolStripMenuItem.Name = "auditoriaToolStripMenuItem";
+            this.auditoriaToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.auditoriaToolStripMenuItem.Text = "Auditoria";
+            this.auditoriaToolStripMenuItem.Click += new System.EventHandler(this.auditoriaToolStripMenuItem_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,5 +254,6 @@
         private System.Windows.Forms.LinkLabel LblLink;
         private System.Windows.Forms.Label Lbl_Copyright;
         private System.Windows.Forms.Label Lbl_Rodape;
+        private System.Windows.Forms.ToolStripMenuItem auditoriaToolStripMenuItem;
     }
 }

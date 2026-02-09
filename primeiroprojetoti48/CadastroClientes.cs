@@ -166,7 +166,7 @@ namespace primeiroprojetoti48
                     cmd.ExecuteNonQuery();
                 }
 
-                MessageBox.Show("Registro inserido com sucesso!");
+                MessageBox.Show($"Cliente cadastrado com sucesso!");
                 LimparCampos();
                 CarregarGrid();
             }
@@ -200,7 +200,7 @@ namespace primeiroprojetoti48
         {
             if (TxtID.Text == "")
             {
-                MessageBox.Show("Selecione um registro para alterar!");
+                MessageBox.Show("Selecione um registro para alterar no campo 'Lista - LblCadastrados'!");
                 return;
             }
 

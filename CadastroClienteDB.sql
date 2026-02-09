@@ -101,3 +101,47 @@ GO
 
 SELECT*FROM VENDAS
 GO
+
+/*
+TABELAS E TRIGGER PARA TABELAS DE AUDITORIA.
+AJUDA DE IA (GEMINI) PARA ELABORAÇÃO E APRENDIZADO DE SINTAXES E FUNCIONALIDADES
+*/
+
+CREATE TABLE AUDITORIA
+(
+    AuditoriaID INT IDENTITY(1,1) PRIMARY KEY,
+    TabelaAfetada NVARCHAR(50),
+    TipoOperacao NVARCHAR(20),
+    DescricaoRegistro NVARCHAR(MAX),
+    DataEvento DATETIME DEFAULT GETDATE()
+);
+GO
+
+CREATE TRIGGER trg_Aud_Clientes ON CLIENTES AFTER DELETE, UPDATE AS
+BEGIN
+    IF NOT EXISTS (SELECT * FROM inserted)
+        INSERT INTO AUDITORIA (TabelaAfetada, TipoOperacao, DescricaoRegistro)
+        SELECT 'CLIENTES', 'EXCLUÍDO', 'Cliente: ' + Nome + ' (CPF: ' + CPF + ')' FROM deleted;
+    ELSE
+        INSERT INTO AUDITORIA (TabelaAfetada, TipoOperacao, DescricaoRegistro)
+        SELECT 'CLIENTES', 'ALTERADO', 'ID: ' + CAST(i.ClienteID AS VARCHAR) + ' - Nome: ' + i.Nome FROM deleted d INNER JOIN inserted i ON d.ClienteID = i.ClienteID;
+END;
+GO
+
+CREATE TRIGGER trg_Aud_Produtos ON PRODUTOS AFTER DELETE, UPDATE AS
+BEGIN
+    IF NOT EXISTS (SELECT * FROM inserted)
+        INSERT INTO AUDITORIA (TabelaAfetada, TipoOperacao, DescricaoRegistro)
+        SELECT 'PRODUTOS', 'EXCLUÍDO', 'Prod: ' + Nome FROM deleted;
+    ELSE
+        INSERT INTO AUDITORIA (TabelaAfetada, TipoOperacao, DescricaoRegistro)
+        SELECT 'PRODUTOS', 'ALTERADO', 'Prod: ' + i.Nome + ' | Preço: ' + CAST(i.Preco AS VARCHAR) FROM deleted d INNER JOIN inserted i ON d.ProdutoID = i.ProdutoID;
+END;
+GO
+
+CREATE TRIGGER trg_Aud_Vendas ON VENDAS AFTER DELETE AS
+BEGIN
+    INSERT INTO AUDITORIA (TabelaAfetada, TipoOperacao, DescricaoRegistro)
+    SELECT 'VENDAS', 'EXCLUÍDO', 'Venda ID: ' + CAST(VendaID AS VARCHAR) + ' | Total: ' + CAST(ValorTotal AS VARCHAR) FROM deleted;
+END;
+GO

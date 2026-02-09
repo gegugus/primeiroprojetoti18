@@ -40,14 +40,14 @@ namespace primeiroprojetoti48
                 {
                     string query = @"
                         SELECT 
-                            C.ClienteID, 
-                            C.Nome AS NomeCliente, 
-                            V.VendaID, 
-                            V.DataVenda, 
-                            VI.ProdutoID, 
-                            VI.Quantidade, 
-                            VI.PrecoUnitario,
-                            V.ValorTotal
+                            C.ClienteID AS 'CLIENTE ID', 
+                            C.Nome AS 'NOME CLIENTE' , 
+                            V.VendaID AS 'VENDA ID', 
+                            V.DataVenda AS 'DATA VENDA', 
+                            VI.ProdutoID AS 'PRODUTO ID', 
+                            VI.Quantidade AS QUANTIDADE, 
+                            VI.PrecoUnitario AS 'PREÇO UNITÁRIO',
+                            V.ValorTotal AS 'VALOR TOTAL (R$) - VENDA'
                         FROM VENDAS V
                         INNER JOIN CLIENTES C ON V.ClienteID = C.ClienteID
                         INNER JOIN VENDAS_ITENS VI ON V.VendaID = VI.VendaID

@@ -13,7 +13,6 @@ namespace primeiroprojetoti48
 {
     public partial class TB_Produtos : Form
     {
-        private int produtoSelecionadoId = -1;
         public TB_Produtos()
         {
             InitializeComponent();
@@ -41,13 +40,13 @@ namespace primeiroprojetoti48
                 {
                     string query = @"
                         SELECT  
-                            P.ProdutoID,   
-                            P.Nome AS NomeProduto,
-                            P.Descricao,
-                            P.Preco,
-                            P.Estoque,
-                            P.Categoria,
-                            P.DataRegistro
+                            P.ProdutoID AS 'PRODUTO ID',   
+                            P.Nome AS 'NOME PRODUTO',
+                            P.Descricao AS DESCRIÇÃO,
+                            P.Preco AS PREÇO,
+                            P.Estoque AS ESTOQUE,
+                            P.Categoria AS CATEGORIA,
+                            P.DataRegistro AS 'DATA REGISTRO'
                         FROM PRODUTOS P
                         ORDER BY P.Nome ASC";
 
