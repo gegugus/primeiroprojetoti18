@@ -1,12 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace primeiroprojetoti48
 {
+    public class Funcionario
+    {
+        public int ID { get; set; }
+        public string NomeFunc { get; set; }
+        public string Usuario { get; set; }
+        public string Email { get; set; }
+        public string Senha { get; set; }
+        public byte[] FotoFunc { get; set; }
+    }
+
     public class Clientes
     {
         public int ClienteID { get; set; }
@@ -19,8 +28,8 @@ namespace primeiroprojetoti48
     public class Contatos
     {
         public int ContatoID { get; set; }
-        public int ClienteID { get; set; }  
-        public string Telefone { get; set; } 
+        public int ClienteID { get; set; }
+        public string Telefone { get; set; }
         public string Email { get; set; }
     }
 
@@ -29,8 +38,8 @@ namespace primeiroprojetoti48
         public int EnderecoID { get; set; }
         public int ClienteID { get; set; }
         public string Logradouro { get; set; }
-        public int Numero { get; set; }
-        public string Bairro { get; set; } 
+        public string Numero { get; set; }
+        public string Bairro { get; set; }
         public string Cidade { get; set; }
         public string Estado { get; set; }
         public string Cep { get; set; }
@@ -38,7 +47,7 @@ namespace primeiroprojetoti48
 
     public class Observacoes
     {
-        public int ObservacoesID { get; set; }
+        public int ObservacaoID { get; set; }
         public int ClienteID { get; set; }
         public string Situacao { get; set; }
         public string Observacao { get; set; }
@@ -47,6 +56,7 @@ namespace primeiroprojetoti48
     public class Produto
     {
         public int ProdutoID { get; set; }
+        public string CodigoBarras { get; set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }
         public decimal Preco { get; set; }
