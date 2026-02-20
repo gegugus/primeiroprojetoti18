@@ -189,6 +189,7 @@
             // 
             // BTN_Carregar
             // 
+            this.BTN_Carregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Carregar.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.BTN_Carregar.ForeColor = System.Drawing.Color.DimGray;
             this.BTN_Carregar.Location = new System.Drawing.Point(569, 257);
@@ -202,6 +203,7 @@
             // 
             // BTN_Deletar
             // 
+            this.BTN_Deletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Deletar.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.BTN_Deletar.ForeColor = System.Drawing.Color.DimGray;
             this.BTN_Deletar.Location = new System.Drawing.Point(754, 257);
@@ -215,6 +217,7 @@
             // 
             // BTN_Salvar
             // 
+            this.BTN_Salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Salvar.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.BTN_Salvar.ForeColor = System.Drawing.Color.DimGray;
             this.BTN_Salvar.Location = new System.Drawing.Point(2, 301);
@@ -228,6 +231,7 @@
             // 
             // BTN_Cancelar
             // 
+            this.BTN_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Cancelar.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.BTN_Cancelar.ForeColor = System.Drawing.Color.DimGray;
             this.BTN_Cancelar.Location = new System.Drawing.Point(192, 301);

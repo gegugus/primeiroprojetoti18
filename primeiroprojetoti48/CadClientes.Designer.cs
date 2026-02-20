@@ -667,6 +667,8 @@
             this.BtnAdicionar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnAdicionar.AutoSize = true;
             this.BtnAdicionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(48)))), ((int)(((byte)(34)))));
+            this.BtnAdicionar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAdicionar.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
             this.BtnAdicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.BtnAdicionar.Location = new System.Drawing.Point(23, 23);
@@ -682,6 +684,8 @@
             this.BtnPesquisar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnPesquisar.AutoSize = true;
             this.BtnPesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(150)))), ((int)(((byte)(90)))));
+            this.BtnPesquisar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPesquisar.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
             this.BtnPesquisar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.BtnPesquisar.Location = new System.Drawing.Point(174, 23);
@@ -697,6 +701,8 @@
             this.BtnAlterar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnAlterar.AutoSize = true;
             this.BtnAlterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(150)))), ((int)(((byte)(90)))));
+            this.BtnAlterar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAlterar.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
             this.BtnAlterar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.BtnAlterar.Location = new System.Drawing.Point(325, 23);
@@ -711,6 +717,8 @@
             // 
             this.BtnMostrarDados.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnMostrarDados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(103)))));
+            this.BtnMostrarDados.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnMostrarDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMostrarDados.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
             this.BtnMostrarDados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.BtnMostrarDados.Location = new System.Drawing.Point(476, 23);
@@ -726,6 +734,8 @@
             this.BtnExcluir.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnExcluir.AutoSize = true;
             this.BtnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(143)))), ((int)(((byte)(133)))));
+            this.BtnExcluir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnExcluir.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
             this.BtnExcluir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.BtnExcluir.Location = new System.Drawing.Point(627, 23);

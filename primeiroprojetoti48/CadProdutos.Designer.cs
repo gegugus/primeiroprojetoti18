@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LBL_NOMEPROGRAMA = new System.Windows.Forms.Label();
             this.PANEL_RODAPE = new System.Windows.Forms.Panel();
             this.LBL_NomeProgramaRodape = new System.Windows.Forms.Label();
@@ -54,6 +54,7 @@
             this.TxtCategoria = new System.Windows.Forms.ComboBox();
             this.DTP_DataRegistro = new System.Windows.Forms.DateTimePicker();
             this.TABLE_DADOS2 = new System.Windows.Forms.TableLayoutPanel();
+            this.TxtDescricao = new System.Windows.Forms.RichTextBox();
             this.LblDescricao = new System.Windows.Forms.Label();
             this.TABLE_DADOS1 = new System.Windows.Forms.TableLayoutPanel();
             this.TxtEstoque = new System.Windows.Forms.TextBox();
@@ -65,7 +66,6 @@
             this.TABLE_DADOS_IMAGEM = new System.Windows.Forms.TableLayoutPanel();
             this.PictureBox = new System.Windows.Forms.PictureBox();
             this.LblImagem = new System.Windows.Forms.Label();
-            this.TxtDescricao = new System.Windows.Forms.RichTextBox();
             this.PANEL_RODAPE.SuspendLayout();
             this.FLOW_BOTOES_DADOS.SuspendLayout();
             this.FLOW_BOTOES_IMAGEM.SuspendLayout();
@@ -140,6 +140,8 @@
             this.BtnAdicionar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnAdicionar.AutoSize = true;
             this.BtnAdicionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(48)))), ((int)(((byte)(34)))));
+            this.BtnAdicionar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAdicionar.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
             this.BtnAdicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.BtnAdicionar.Location = new System.Drawing.Point(25, 25);
@@ -156,6 +158,8 @@
             this.BtnPesquisar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnPesquisar.AutoSize = true;
             this.BtnPesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(150)))), ((int)(((byte)(90)))));
+            this.BtnPesquisar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPesquisar.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
             this.BtnPesquisar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.BtnPesquisar.Location = new System.Drawing.Point(180, 25);
@@ -172,6 +176,8 @@
             this.BtnAlterar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnAlterar.AutoSize = true;
             this.BtnAlterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(150)))), ((int)(((byte)(90)))));
+            this.BtnAlterar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAlterar.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
             this.BtnAlterar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.BtnAlterar.Location = new System.Drawing.Point(335, 25);
@@ -188,6 +194,8 @@
             this.BtnMostrarDados.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnMostrarDados.AutoSize = true;
             this.BtnMostrarDados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(94)))), ((int)(((byte)(103)))));
+            this.BtnMostrarDados.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnMostrarDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMostrarDados.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
             this.BtnMostrarDados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.BtnMostrarDados.Location = new System.Drawing.Point(490, 25);
@@ -229,6 +237,8 @@
             // 
             this.LblImgInserir.AutoSize = true;
             this.LblImgInserir.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LblImgInserir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.LblImgInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblImgInserir.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
             this.LblImgInserir.Location = new System.Drawing.Point(25, 25);
             this.LblImgInserir.Margin = new System.Windows.Forms.Padding(5);
@@ -243,6 +253,8 @@
             // 
             this.LblImgExcluir.AutoSize = true;
             this.LblImgExcluir.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LblImgExcluir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.LblImgExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblImgExcluir.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
             this.LblImgExcluir.Location = new System.Drawing.Point(180, 25);
             this.LblImgExcluir.Margin = new System.Windows.Forms.Padding(5);
@@ -270,23 +282,23 @@
             // 
             // DTG_View
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DTG_View.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DTG_View.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DTG_View.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DTG_View.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DTG_View.DefaultCellStyle = dataGridViewCellStyle2;
             this.DTG_View.Dock = System.Windows.Forms.DockStyle.Top;
             this.DTG_View.Location = new System.Drawing.Point(23, 53);
             this.DTG_View.Name = "DTG_View";
@@ -433,6 +445,17 @@
             this.TABLE_DADOS2.Size = new System.Drawing.Size(700, 178);
             this.TABLE_DADOS2.TabIndex = 41;
             // 
+            // TxtDescricao
+            // 
+            this.TxtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtDescricao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TxtDescricao.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.TxtDescricao.Location = new System.Drawing.Point(23, 53);
+            this.TxtDescricao.Name = "TxtDescricao";
+            this.TxtDescricao.Size = new System.Drawing.Size(654, 102);
+            this.TxtDescricao.TabIndex = 8;
+            this.TxtDescricao.Text = "";
+            // 
             // LblDescricao
             // 
             this.LblDescricao.AutoSize = true;
@@ -463,7 +486,7 @@
             this.TABLE_DADOS1.RowCount = 2;
             this.TABLE_DADOS1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.TABLE_DADOS1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TABLE_DADOS1.Size = new System.Drawing.Size(700, 104);
+            this.TABLE_DADOS1.Size = new System.Drawing.Size(712, 104);
             this.TABLE_DADOS1.TabIndex = 40;
             // 
             // TxtEstoque
@@ -471,9 +494,9 @@
             this.TxtEstoque.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtEstoque.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtEstoque.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.TxtEstoque.Location = new System.Drawing.Point(572, 53);
+            this.TxtEstoque.Location = new System.Drawing.Point(582, 53);
             this.TxtEstoque.Name = "TxtEstoque";
-            this.TxtEstoque.Size = new System.Drawing.Size(105, 27);
+            this.TxtEstoque.Size = new System.Drawing.Size(107, 27);
             this.TxtEstoque.TabIndex = 6;
             // 
             // LblEstoque
@@ -481,9 +504,9 @@
             this.LblEstoque.AutoSize = true;
             this.LblEstoque.Dock = System.Windows.Forms.DockStyle.Top;
             this.LblEstoque.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
-            this.LblEstoque.Location = new System.Drawing.Point(572, 20);
+            this.LblEstoque.Location = new System.Drawing.Point(582, 20);
             this.LblEstoque.Name = "LblEstoque";
-            this.LblEstoque.Size = new System.Drawing.Size(105, 19);
+            this.LblEstoque.Size = new System.Drawing.Size(107, 19);
             this.LblEstoque.TabIndex = 5;
             this.LblEstoque.Text = "Estoque";
             // 
@@ -492,9 +515,9 @@
             this.LblPreco.AutoSize = true;
             this.LblPreco.Dock = System.Windows.Forms.DockStyle.Top;
             this.LblPreco.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
-            this.LblPreco.Location = new System.Drawing.Point(462, 20);
+            this.LblPreco.Location = new System.Drawing.Point(470, 20);
             this.LblPreco.Name = "LblPreco";
-            this.LblPreco.Size = new System.Drawing.Size(104, 19);
+            this.LblPreco.Size = new System.Drawing.Size(106, 19);
             this.LblPreco.TabIndex = 3;
             this.LblPreco.Text = "Preço";
             // 
@@ -505,7 +528,7 @@
             this.LblNome.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
             this.LblNome.Location = new System.Drawing.Point(23, 20);
             this.LblNome.Name = "LblNome";
-            this.LblNome.Size = new System.Drawing.Size(433, 19);
+            this.LblNome.Size = new System.Drawing.Size(441, 19);
             this.LblNome.TabIndex = 1;
             this.LblNome.Text = "Nome do Produto";
             // 
@@ -516,7 +539,7 @@
             this.TxtNome.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.TxtNome.Location = new System.Drawing.Point(23, 53);
             this.TxtNome.Name = "TxtNome";
-            this.TxtNome.Size = new System.Drawing.Size(433, 27);
+            this.TxtNome.Size = new System.Drawing.Size(441, 27);
             this.TxtNome.TabIndex = 2;
             // 
             // TxtPreco
@@ -525,9 +548,9 @@
             this.TxtPreco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtPreco.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtPreco.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.TxtPreco.Location = new System.Drawing.Point(462, 53);
+            this.TxtPreco.Location = new System.Drawing.Point(470, 53);
             this.TxtPreco.Name = "TxtPreco";
-            this.TxtPreco.Size = new System.Drawing.Size(104, 27);
+            this.TxtPreco.Size = new System.Drawing.Size(106, 27);
             this.TxtPreco.TabIndex = 4;
             // 
             // TABLE_DADOS_IMAGEM
@@ -568,17 +591,6 @@
             this.LblImagem.Size = new System.Drawing.Size(410, 19);
             this.LblImagem.TabIndex = 1;
             this.LblImagem.Text = "Imagem";
-            // 
-            // TxtDescricao
-            // 
-            this.TxtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxtDescricao.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TxtDescricao.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.TxtDescricao.Location = new System.Drawing.Point(23, 53);
-            this.TxtDescricao.Name = "TxtDescricao";
-            this.TxtDescricao.Size = new System.Drawing.Size(654, 102);
-            this.TxtDescricao.TabIndex = 8;
-            this.TxtDescricao.Text = "";
             // 
             // CadProdutos
             // 

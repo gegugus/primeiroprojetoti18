@@ -70,9 +70,16 @@ namespace primeiroprojetoti48
     {
         public int VendaID { get; set; }
         public int ClienteID { get; set; }
+        public int FuncionarioID { get; set; }
         public DateTime DataVenda { get; set; }
         public decimal ValorTotal { get; set; }
         public decimal Desconto { get; set; }
+        public string TipoEntrega { get; set; }
+        public string EnderecoEntrega { get; set; }
+        public string FormaPagamento { get; set; }
+        public string BandeiraCartao { get; set; }
+        public int Parcelas { get; set; }
+        public string ValorParcelado_Texto { get; set; } 
     }
 
     public class ItemCarrinho

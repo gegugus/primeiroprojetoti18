@@ -153,7 +153,7 @@ namespace primeiroprojetoti48
 
         private void PANEL3_Click(object sender, EventArgs e)
         {
-            Vendas Venda = new Vendas();
+            CadVendas Venda = new CadVendas(this.usuarioLogado);
             Venda.Show();
         }
 
